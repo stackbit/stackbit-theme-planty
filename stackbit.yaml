@@ -9,6 +9,20 @@ pagesDir: content
 init_js: js/main.js
 logicFields:
   - weight
+  - palette.sass.default
+  - palette.sass.light
+  - palette.sass.medium
+  - palette.sass.dark
+  - palette.sass.active
+  - palette.sass.active_light
+  - palette.sass.active_medium
+  - palette.sass.active_dark
+  - palette.sass.dark_grey
+  - palette.sass.light_grey
+  - palette.sass.bg_image_primary_optimized
+  - palette.sass.bg_image_primary_fallback
+  - palette.sass.bg_image_secondary_optimized
+  - palette.sass.bg_image_secondary_fallback
 metadata:
   title: Planty
   description: An e-commerce theme powered by Snipcart
