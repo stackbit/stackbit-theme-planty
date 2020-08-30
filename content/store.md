@@ -2,10 +2,10 @@
 title: Store
 layout: store
 featured_products:
-  - products/plant1
-  - products/plant2
-  - products/plant5
-  - products/plant9
+  - content/products/plant1.md
+  - content/products/plant2.md
+  - content/products/plant5.md
+  - content/products/plant9.md
 menus:
     main:
         weight: 1

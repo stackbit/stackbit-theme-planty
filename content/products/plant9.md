@@ -8,18 +8,18 @@ description: Nulla diam diam, maximus gravida efficitur eu, ultricies quis orci.
 images:
     default:
         thumbnail:
-            optimized: /images/plant9.webp
-            fallback: /images/plant9.jpg
+            optimized: images/plant9.webp
+            fallback: images/plant9.jpg
         original:
-            optimized: /images/plant9-lg.webp
-            fallback: /images/plant9-lg.jpg
+            optimized: images/plant9-lg.webp
+            fallback: images/plant9-lg.jpg
     featured: 
         thumbnail:
-            optimized: /images/plant9-featured.webp
-            fallback: /images/plant9-featured.jpg
+            optimized: images/plant9-featured.webp
+            fallback: images/plant9-featured.jpg
         original:
-            optimized: /images/plant9-featured-lg.webp
-            fallback: /images/plant9-featured-lg.jpg
+            optimized: images/plant9-featured-lg.webp
+            fallback: images/plant9-featured-lg.jpg
 category: cactuses
 section: Store
 ---
