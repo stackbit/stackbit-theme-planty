@@ -23,6 +23,10 @@ logicFields:
   - palette.sass.bg_image_primary_fallback
   - palette.sass.bg_image_secondary_optimized
   - palette.sass.bg_image_secondary_fallback
+  - palette.sass.bg_image_product_optimized
+  - palette.sass.bg_image_product_fallback
+  - palette.sass.bg_image_cart_optimized
+  - palette.sass.bg_image_cart_fallback
 metadata:
   title: Planty
   description: An e-commerce theme powered by Snipcart
