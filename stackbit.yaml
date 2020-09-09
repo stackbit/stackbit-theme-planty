@@ -427,10 +427,6 @@ models:
         name: featured
         label: Featured
         default: false
-      - type: number
-        name: order
-        label: Order
-        description: Numerical order of sorting featured items
   action:
     type: object
     label: Action
