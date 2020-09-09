@@ -1,5 +1,7 @@
 baseurl: "/"
 title: 'Snipcart'
+init_js: js/main.js
+page_load_js: js/page_load.js
 params:
   logos:
     dark:

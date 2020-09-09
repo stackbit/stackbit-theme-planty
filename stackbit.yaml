@@ -6,7 +6,6 @@ staticDir: static
 uploadDir: images
 dataDir: data
 pagesDir: content
-init_js: js/main.js
 logicFields:
   - weight
   - palette.sass.default
@@ -435,7 +434,7 @@ models:
   action:
     type: object
     label: Action
-    labelField: label
+    labelField: title
     fields:
       - type: string
         name: title
