@@ -14,7 +14,4 @@ bulletpoints:
     image:
       optimized: images/team.webp
       fallback: images/team.jpg
-menus:
-    main:
-        weight: 2
 ---

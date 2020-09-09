@@ -43,8 +43,4 @@ questions:
       Q: What’s the meaning of life?
       <br />
       A: We’re not quite sure. But building useful products with people we love feels meaningful enough.
-
-menus:
-    main:
-        weight: 3
 ---

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block body %} 
-    {% if page.basename == "index.md" %}
+    {% if page.url == "/" %}
         <div class="header-wrapper">
             <div class="header-wrapper__overlay">
                 {% set include_dict = {'page': page} %}

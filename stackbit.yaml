@@ -86,6 +86,13 @@ models:
             models: [palette]
             name: default
             label: Default
+      - type: list
+        name: main_menu
+        label: Navigation Links
+        description: List of navigation links.
+        items:
+          type: model
+          models: [action]
   palette:
     type: object
     label: Palette
@@ -425,3 +432,17 @@ models:
         name: order
         label: Order
         description: Numerical order of sorting featured items
+  action:
+    type: object
+    label: Action
+    labelField: label
+    fields:
+      - type: string
+        name: title
+        label: Title
+        required: true
+      - type: string
+        name: url
+        label: URL
+        required: true
+        widget: url

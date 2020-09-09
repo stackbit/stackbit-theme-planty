@@ -16,7 +16,7 @@
             </a>
         </div>
         <ul class="nav__menu">
-            {% for item in site.menus.main %}
+            {% for item in site.params.main_menu %}
                 {% set section = page.params.section | default(page.title, true) %}
                 {% set isActive = true if item.title == section else false %}
                 <li class="nav__menu-item">
@@ -60,7 +60,7 @@
                     </svg>                            
                 </button>
                 <ul class="hamburger__nav">
-                    {% for item in site.menus.main %}
+                    {% for item in site.params.main_menu %}
                         {% set section = page.params.section | default(page.title, true) %}
                         {% set isActive = true if item.title == section else false %}
                         <li class="hamburger__nav-item">
