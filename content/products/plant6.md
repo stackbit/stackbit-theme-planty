@@ -7,18 +7,18 @@ description: Cras molestie faucibus ipsum ut vulputate.
 images:
     default:
         thumbnail:
-            optimized: /images/plant6.webp
-            fallback: /images/plant6.jpg
+            optimized: images/plant6.webp
+            fallback: images/plant6.jpg
         original:
-            optimized: /images/plant6-lg.webp
-            fallback: /images/plant6-lg.jpg
+            optimized: images/plant6-lg.webp
+            fallback: images/plant6-lg.jpg
     featured: 
         thumbnail:
-            optimized: /images/plant6-featured.webp
-            fallback: /images/plant6-featured.jpg
+            optimized: images/plant6-featured.webp
+            fallback: images/plant6-featured.jpg
         original:
-            optimized: /images/plant6-featured-lg.webp
-            fallback: /images/plant6-featured-lg.jpg
+            optimized: images/plant6-featured-lg.webp
+            fallback: images/plant6-featured-lg.jpg
 order: 6
 category: bigplants
 section: Store
