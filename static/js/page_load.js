@@ -99,9 +99,9 @@ document.addEventListener('mouseout', _ => draggableItems.forEach(element => ele
 document.querySelectorAll('.js-figure-link').forEach((l) => {
     l.addEventListener('click', _ => {
         const snipcartButton = _.target.closest('.snipcart-add-item');
-        if (!snipcartButton) {
-            const link = _.target.closest('figure').dataset['href'];
-            window.location = link;
+        if (snipcartButton) {
+            _.preventDefault();
+            return false;
         }
     });
 });
