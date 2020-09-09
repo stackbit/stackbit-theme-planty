@@ -1,4 +1,4 @@
-{% set featured_products = include_dict.featured_products_pages %}
+{% set featured_products = include_dict.featured_product_pages %}
 {% set listCssClass = include_dict.cssClass %}
 <ul class="product-grid {% if listCssClass %}{{ listCssClass }}{%endif%}">
     {% for product_page in featured_products %}
