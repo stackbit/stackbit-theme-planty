@@ -1,5 +1,5 @@
 ---
-layout: index
+layout: home
 title: Home
 isHome: true
 ---

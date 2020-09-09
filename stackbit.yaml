@@ -156,10 +156,10 @@ models:
             name: bg_image_cart_fallback
             label: Cart Fallback Backround Image
             description: Cart Fallback Backround Image (JPG or PNG)
-  index:
+  home:
     type: page
     label: Home
-    layout: index
+    layout: home
     file: index.md
     singleInstance: true
     fields:
