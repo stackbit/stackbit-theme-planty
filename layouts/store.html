@@ -24,8 +24,8 @@
             </svg>                    
             Best Sellers
         </h2>
-        {% set featured_products = page.params.featured_products %}
-        {% set include_dict = {'featured_products': featured_products, 'listCssClass': 'product-grid--draggable'} %}
+        {% set featured_product_pages = getPages('/products') | where('featured', true) | sort_array('order', 'asc') %}
+        {% set include_dict = {'featured_product_pages': featured_product_pages, 'listCssClass': 'product-grid--draggable'} %}
         {% include "featured_products.html" %}
     </section>
 

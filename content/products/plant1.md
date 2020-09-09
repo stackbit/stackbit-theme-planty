@@ -2,24 +2,25 @@
 layout: product
 id: '1'
 price: '49.40' 
+featured: true
 order: 1
 title: Nulla suscipit
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla suscipit velit lectus, vitae efficitur quam mollis eget. Integer porta at nisl eget tincidunt. 
 images:
     default:
         thumbnail:
-            optimized: images/plant1.jpg
-            fallback: images/plant1.jpg
+            optimized: /images/plant1.jpg
+            fallback: /images/plant1.jpg
         original:
-            optimized: images/plant1-lg.jpg
-            fallback: images/plant1-lg.jpg
+            optimized: /images/plant1-lg.jpg
+            fallback: /images/plant1-lg.jpg
     featured: 
         thumbnail:
-            optimized: images/plant1-featured.webp
-            fallback: images/plant1-featured.jpg
+            optimized: /images/plant1-featured.webp
+            fallback: /images/plant1-featured.jpg
         original:
-            optimized: images/plant1-featured-lg.webp
-            fallback: images/plant1-featured-lg.jpg
+            optimized: /images/plant1-featured-lg.webp
+            fallback: /images/plant1-featured-lg.jpg
 category: bigplants
 section: Store
 ---

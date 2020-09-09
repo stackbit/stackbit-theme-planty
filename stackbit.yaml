@@ -186,14 +186,6 @@ models:
       - type: string
         label: Title
         name: title
-      - type: list
-        label: Featured Products
-        name: featured_products
-        description: List of products to feature in the homepage
-        items:
-          type: reference
-          labelField: title
-          models: [product]
   faq:
     type: page
     label: FAQ
@@ -425,3 +417,11 @@ models:
         name: section
         label: Section
         options: [Store, About, Home]
+      - type: boolean
+        name: featured
+        label: Featured
+        default: false
+      - type: number
+        name: order
+        label: Order
+        description: Numerical order of sorting featured items

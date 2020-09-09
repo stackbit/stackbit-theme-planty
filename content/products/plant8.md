@@ -8,18 +8,18 @@ description: In cursus sagittis eros non congue.
 images:
     default:
         thumbnail:
-            optimized: images/plant8.webp
-            fallback: images/plant8.jpg
+            optimized: /images/plant8.webp
+            fallback: /images/plant8.jpg
         original:
-            optimized: images/plant8-lg.webp
-            fallback: images/plant8-lg.jpg
+            optimized: /images/plant8-lg.webp
+            fallback: /images/plant8-lg.jpg
     featured: 
         thumbnail:
-            optimized: images/plant8-featured.webp
-            fallback: images/plant8-featured.jpg
+            optimized: /images/plant8-featured.webp
+            fallback: /images/plant8-featured.jpg
         original:
-            optimized: images/plant8-featured-lg.webp
-            fallback: images/plant8-featured-lg.jpg
+            optimized: /images/plant8-featured-lg.webp
+            fallback: /images/plant8-featured-lg.jpg
 category: summer
 section: Store
 ---
