@@ -17,9 +17,10 @@ images:
             optimized: /images/plant3-featured.webp
             fallback: /images/plant3-featured.jpg
         original:
-            optimized: /images/plant3-featured-lg.webp
+            optimized: /images/plant3-featured-lg.jpg
             fallback: /images/plant3-featured-lg.jpg
-featured: false
+featured: true
+order: 3
 category: cactuses
 section: Store
 ---

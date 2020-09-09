@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block body %} 
-    {% if page.basename == "index.md" %}
+    {% if page.url == "/" %}
         <div class="header-wrapper">
             <div class="header-wrapper__overlay">
                 {% set include_dict = {'page': page} %}
@@ -18,4 +18,5 @@
 
     {% set include_dict = {'page': page,'site': site} %}
     {% include "footer.html" %}
+    <div style="display: none" id="template-params" data-api-key="{{ site.params.snipcart_api_key }}"></div>
 {% endblock %}

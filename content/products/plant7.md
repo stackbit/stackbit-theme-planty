@@ -19,7 +19,7 @@ images:
         original:
             optimized: /images/plant7-featured-lg.webp
             fallback: /images/plant7-featured-lg.jpg
-featured: false
+order: 7
 category: bigplants
 section: Store
 ---

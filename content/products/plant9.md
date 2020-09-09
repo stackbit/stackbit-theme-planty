@@ -20,6 +20,7 @@ images:
             optimized: /images/plant9-featured-lg.webp
             fallback: /images/plant9-featured-lg.jpg
 featured: true
+order: 9
 category: cactuses
 section: Store
 ---

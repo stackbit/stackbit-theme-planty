@@ -7,10 +7,10 @@ description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla susc
 images:
     default:
         thumbnail:
-            optimized: /images/plant1.webp
+            optimized: /images/plant1.jpg
             fallback: /images/plant1.jpg
         original:
-            optimized: /images/plant1-lg.webp
+            optimized: /images/plant1-lg.jpg
             fallback: /images/plant1-lg.jpg
     featured: 
         thumbnail:
@@ -20,6 +20,7 @@ images:
             optimized: /images/plant1-featured-lg.webp
             fallback: /images/plant1-featured-lg.jpg
 featured: true
+order: 1
 category: bigplants
 section: Store
 ---
