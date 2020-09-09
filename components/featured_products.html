@@ -1,7 +1,6 @@
-{% set featured_products = include_dict.featured_product_pages %}
-{% set listCssClass = include_dict.cssClass %}
-<ul class="product-grid {% if listCssClass %}{{ listCssClass }}{%endif%}">
-    {% for product_page in featured_products %}
+{% set product_pages = include_dict.featured_product_pages %}
+<ul class="product-grid product-grid--draggable">
+    {% for product_page in product_pages %}
         <li class="product-grid__item">
             <figure data-href="{{ product_page.url | relative_url }}" class="js-figure-link product-grid__item-figure js-figure-link">
                 {% set include_dict = {'image': product_page.params.images.featured.thumbnail, 'alt': product_page.title, 'cssClass': 'product-grid__item-image product-grid__item-image--featured'} %}

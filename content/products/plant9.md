@@ -2,8 +2,6 @@
 layout: product
 id: '9'
 price: '400.00'
-featured: true
-order: 9
 title: Fusce sagittis
 description: Nulla diam diam, maximus gravida efficitur eu, ultricies quis orci.
 images:
@@ -21,6 +19,8 @@ images:
         original:
             optimized: /images/plant9-featured-lg.webp
             fallback: /images/plant9-featured-lg.jpg
+featured: true
+order: 9
 category: cactuses
 section: Store
 ---

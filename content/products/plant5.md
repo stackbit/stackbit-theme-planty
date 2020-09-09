@@ -2,8 +2,6 @@
 layout: product
 id: '5'
 price: '220.00'
-featured: true
-order: 5
 title: Vestibulum eget
 description: Donec finibus, augue in sagittis auctor, mi neque convallis arcu, quis volutpat massa dolor id purus.
 images:
@@ -21,6 +19,8 @@ images:
         original:
             optimized: /images/plant5-featured-lg.webp
             fallback: /images/plant5-featured-lg.jpg
+featured: true
+order: 5
 category: bigplants
 section: Store
 ---

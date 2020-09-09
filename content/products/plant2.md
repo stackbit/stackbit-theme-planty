@@ -2,7 +2,6 @@
 layout: product
 id: '2'
 price: '99.00'
-order: 2
 title: Integer porta
 description: Suspendisse efficitur eget erat sit amet efficitur. 
 images:
@@ -20,6 +19,7 @@ images:
         original:
             optimized: /images/plant2-featured-lg.webp
             fallback: /images/plant2-featured-lg.jpg
+order: 2
 category: cactuses
 section: Store
 ---

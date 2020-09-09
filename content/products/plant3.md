@@ -2,8 +2,6 @@
 layout: product
 id: '3'
 price: '150.00'
-featured: true
-order: 3
 title: Curabitur eu tempor
 description: Nulla non pretium metus, vitae finibus lectus.
 images:
@@ -21,6 +19,8 @@ images:
         original:
             optimized: /images/plant3-featured-lg.jpg
             fallback: /images/plant3-featured-lg.jpg
+featured: true
+order: 3
 category: cactuses
 section: Store
 ---
