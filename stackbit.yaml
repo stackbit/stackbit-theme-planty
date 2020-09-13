@@ -35,26 +35,12 @@ models:
         label: Logos
         name: logos
         fields:
-          - type: object
+          - type: image
             name: light
             label: Light
-            fields:
-              - type: image
-                name: optimized
-                label: Optimized (WEBP or similar)
-              - type: image
-                name: fallback
-                label: Fallback (JPG or PNG)
-          - type: object
+          - type: image
             name: dark
             label: Dark
-            fields:
-              - type: image
-                name: optimized
-                label: Optimized (WEBP or similar)
-              - type: image
-                name: fallback
-                label: Fallback (JPG or PNG)
       - type: enum
         label: Color Palette
         name: palette
