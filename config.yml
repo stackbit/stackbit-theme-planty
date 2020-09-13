@@ -4,12 +4,8 @@ init_js: js/main.js
 page_load_js: js/page_load.js
 params:
   logos:
-    dark:
-      optimized: 'images/logo.svg'
-      fallback: 'images/logo.svg'
-    light: 
-      optimized: 'images/logo-white.svg'
-      fallback: 'images/logo-white.svg'
+    dark: 'images/logo.svg'
+    light: 'images/logo-white.svg'
   snipcart_api_key: ''
   palette: default
   palettes:

@@ -4,7 +4,7 @@
         <li class="product-grid__item">
             <a href="{{ product_page.url | relative_url }}">
                 <figure class="js-figure-link product-grid__item-figure js-figure-link">
-                    {% set include_dict = {'image': product_page.params.images.featured_thumbnail, 'alt': product_page.title, 'cssClass': 'product-grid__item-image product-grid__item-image--featured'} %}
+                    {% set include_dict = {'image': product_page.params.featured_thumbnail_image, 'alt': product_page.title, 'cssClass': 'product-grid__item-image product-grid__item-image--featured'} %}
                     {% include "picture.html" %}
                     <figcaption>
                         {% set include_dict = {'product_page': product_page, 'component': 'product-grid'} %}

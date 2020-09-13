@@ -4,19 +4,10 @@ id: '6'
 price: '100.00'
 title: Donec finibus
 description: Cras molestie faucibus ipsum ut vulputate.
-images:
-    default_thumbnail:
-        optimized: images/plant6.jpg
-        fallback: images/plant6.jpg
-    default_original:
-        optimized: images/plant6-lg.jpg
-        fallback: images/plant6-lg.jpg
-    featured_thumbnail:
-        optimized: images/plant6-featured.webp
-        fallback: images/plant6-featured.jpg
-    featured_original:
-        optimized: images/plant6-featured-lg.webp
-        fallback: images/plant6-featured-lg.jpg
+default_thumbnail_image: images/plant6.jpg
+default_original_image: images/plant6-lg.jpg
+featured_thumbnail_image: images/plant6-featured.jpg
+featured_original_image: images/plant6-featured-lg.jpg
 order: 6
 category: bigplants
 section: Store

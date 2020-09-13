@@ -4,8 +4,6 @@
 
 {% if image %}
 <picture>
-  <source srcset="{{ image.optimized | relative_url }}" type="image/webp">
-  <source srcset="{{ image.fallback | relative_url }}" type="image/jpeg">
-  <img src="{{ image.fallback | relative_url }}" {% if alt %}alt="{{ alt }}"{% endif %}  {% if cssClass %}class="{{ cssClass }}"{% endif %}>
+  <img src="{{ image | relative_url }}" {% if alt %}alt="{{ alt }}"{% endif %}  {% if cssClass %}class="{{ cssClass }}"{% endif %}>
 </picture>
 {% endif %}

@@ -249,23 +249,16 @@ models:
             - type: markdown
               name: description
               label: Description
-            - type: object
+            - type: image
               name: image
-              label: Image
-              fields:
-                - type: image
-                  name: optimized
-                  label: Optimized (WEBP or similar)
-                - type: image
-                  name: fallback
-                  label: Fallback (JPG or PNG)
+              label: Bulletpoint image
   category:
     type: page
     label: Category
     hideContent: true
     layout: category
     folder: category
-    urlPath: '/category/{slug}'
+    urlPath: 'category/{slug}'
     fields:
       - type: slug
         name: slug
@@ -292,16 +285,9 @@ models:
       - type: string
         name: subtitle
         label: subtitle
-      - type: object
+      - type: image
         name: image
-        label: Image
-        fields:
-          - type: image
-            name: optimized
-            label: Optimized (WEBP or similar)
-          - type: image
-            name: fallback
-            label: Fallback (JPG or PNG)
+        label: Promotion Image
       - type: object
         name: cta
         label: Call to action
@@ -342,7 +328,7 @@ models:
     type: page
     label: Product
     layout: product
-    urlPath: '/products/{slug}'
+    urlPath: 'products/{slug}'
     folder: products
     fields:
       - type: string
@@ -361,26 +347,18 @@ models:
         name: order
         label: Order
         description: numerical order of sorting products
-      - type: object
-        name: images
-        label: Images
-        fields:
-          - type: model
-            label: Default Thumbnail
-            name: default_thumbnail
-            models: [imageset]
-          - type: model
-            label: Default Original
-            name: default_original
-            models: [imageset]
-          - type: model
-            label: Featured Thumbnail
-            name: featured_thumbnail
-            models: [imageset]
-          - type: model
-            label: Featured Original
-            name: featured_original
-            models: [imageset]
+      - type: image
+        label: Default Thumbnail Image
+        name: default_thumbnail_image
+      - type: image
+        label: Default Original Image
+        name: default_original_image
+      - type: image
+        label: Featured Thumbnail Image
+        name: featured_thumbnail_image
+      - type: image
+        label: Featured Original Image
+        name: featured_original_image
       - type: enum
         name: category
         label: Category
@@ -408,14 +386,3 @@ models:
         label: URL
         required: true
         widget: url
-  imageset:
-    type: object
-    label: Image Set
-    labelField: fallback
-    fields:
-      - type: image
-        name: optimized
-        label: Optimized (WEBP or similar)
-      - type: image
-        name: fallback
-        label: Fallback (JPG or PNG)

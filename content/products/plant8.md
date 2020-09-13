@@ -4,19 +4,10 @@ id: '8'
 price: '50.00'
 title: Fusce sed
 description: In cursus sagittis eros non congue.
-images:
-    default_thumbnail:
-        optimized: images/plant8.jpg
-        fallback: images/plant8.jpg
-    default_original:
-        optimized: images/plant8-lg.jpg
-        fallback: images/plant8-lg.jpg
-    featured_thumbnail:
-        optimized: images/plant8-featured.webp
-        fallback: images/plant8-featured.jpg
-    featured_original:
-        optimized: images/plant8-featured-lg.webp
-        fallback: images/plant8-featured-lg.jpg
+default_thumbnail_image: images/plant8.jpg
+default_original_image: images/plant8-lg.jpg
+featured_thumbnail_image: images/plant8-featured.jpg
+featured_original_image: images/plant8-featured-lg.jpg
 order: 8
 category: summer
 section: Store

@@ -1,10 +1,7 @@
 {
     "title": "A new home interior for summer",
     "subtitle": "from $149.99",
-    "image": {
-        "optimized": "images/promo.webp",
-        "fallback": "images/promo.jpg"
-    },
+    "image": "images/promo.jpg",
     "cta": {
         "text": "Discover",
         "link": "/store"

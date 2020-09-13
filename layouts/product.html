@@ -15,7 +15,7 @@
                 </a>
             </div>
             <figure class="product__figure">
-                {% set include_dict = {'image': page.params.images.default.original, 'alt': page.title, 'cssClass': 'product__image'} %}
+                {% set include_dict = {'image': page.params.default_original_image, 'alt': page.title, 'cssClass': 'product__image'} %}
                 {% include "picture.html" %}
             </figure>
             <div class="product__details">
