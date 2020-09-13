@@ -7,8 +7,8 @@ uploadDir: images
 dataDir: data
 pagesDir: content
 logicFields:
-  - weight
   - slug
+  - order
   - logos
   - palette.sass
 metadata:
