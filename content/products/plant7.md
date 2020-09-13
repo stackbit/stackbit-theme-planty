@@ -5,20 +5,18 @@ price: '18.90'
 title: Sed consectetur
 description: Fusce sed tortor id diam rhoncus accumsan.
 images:
-    default:
-        thumbnail:
-            optimized: images/plant7.webp
-            fallback: images/plant7.jpg
-        original:
-            optimized: images/plant7-lg.webp
-            fallback: images/plant7-lg.jpg
-    featured: 
-        thumbnail:
-            optimized: images/plant7-featured.webp
-            fallback: images/plant7-featured.jpg
-        original:
-            optimized: images/plant7-featured-lg.webp
-            fallback: images/plant7-featured-lg.jpg
+    default_thumbnail:
+        optimized: images/plant7.jpg
+        fallback: images/plant7.jpg
+    default_original:
+        optimized: images/plant7-lg.jpg
+        fallback: images/plant7-lg.jpg
+    featured_thumbnail:
+        optimized: images/plant7-featured.webp
+        fallback: images/plant7-featured.jpg
+    featured_original:
+        optimized: images/plant7-featured-lg.webp
+        fallback: images/plant7-featured-lg.jpg
 order: 7
 category: bigplants
 section: Store

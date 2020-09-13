@@ -2,7 +2,7 @@
 title: FAQ
 layout: faq
 headline: Behold our FAQ
-introduction: All right, friends. Let’s do this. This section will cover basic, frequently asked questions for e-commerce merchants.
+subtitle: All right, friends. Let’s do this. This section will cover basic, frequently asked questions for e-commerce merchants.
 questions:
   - question: How long does shipping take?
     answer: >-

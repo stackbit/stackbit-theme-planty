@@ -5,20 +5,18 @@ price: '150.00'
 title: Curabitur eu tempor
 description: Nulla non pretium metus, vitae finibus lectus.
 images:
-    default:
-        thumbnail:
-            optimized: images/plant3.webp
-            fallback: images/plant3.jpg
-        original:
-            optimized: images/plant3-lg.webp
-            fallback: images/plant3-lg.jpg
-    featured: 
-        thumbnail:
-            optimized: images/plant3-featured.webp
-            fallback: images/plant3-featured.jpg
-        original:
-            optimized: images/plant3-featured-lg.jpg
-            fallback: images/plant3-featured-lg.jpg
+    default_thumbnail:
+        optimized: images/plant3.jpg
+        fallback: images/plant3.jpg
+    default_original:
+        optimized: images/plant3-lg.jpg
+        fallback: images/plant3-lg.jpg
+    featured_thumbnail:
+        optimized: images/plant3-featured.webp
+        fallback: images/plant3-featured.jpg
+    featured_original:
+        optimized: images/plant3-featured-lg.webp
+        fallback: images/plant3-featured-lg.jpg
 featured: true
 order: 3
 category: cactuses

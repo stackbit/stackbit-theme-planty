@@ -1,5 +1,14 @@
 {% extends "body.html" %}
 {% block content %}
-<main class="content">
+<main class="content page">
+    {% set include_dict = {'page': page, 'bleed': false} %}
+    {% include "static_header.html" %}
+    <section class="content__row page__section">
+        <div class="page__section-content-container">
+            <div class="page__section-content">
+                {{ page.content | markdownify }}
+            </div>
+        </div>
+    </section>
 </main>
 {% endblock %}
