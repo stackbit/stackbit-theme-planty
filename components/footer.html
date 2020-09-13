@@ -3,7 +3,7 @@
 {% set menu = site.params.main_menu %}
 <footer class="footer">
     <div class="footer__container">
-        <a href="/">
+        <a href="{{ '/' | relative_url }}">
             {% set include_dict = {'image': site.params.logos.light, 'cssClass': 'footer__logo', 'alt': 'Planty logo'} %}
             {% include "picture.html" %}
         </a>

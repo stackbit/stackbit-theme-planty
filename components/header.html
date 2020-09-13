@@ -5,7 +5,7 @@
 <header class="header">
     <nav {{ classNames('nav', {'nav--light': isHome, 'nav--dark': isHome != true}) }}>
         <div class="nav__logo">
-            <a href="/">
+            <a href="{{ '/' | relative_url }}">
                 {% if isHome == true or page.layout == "product" %}
                     {% set include_dict = {'image': site.params.logos.light, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
                     {% include "picture.html" %}
