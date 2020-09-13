@@ -1,5 +1,5 @@
 baseurl: "/"
-title: 'Snipcart'
+title: 'Planty'
 init_js: js/main.js
 page_load_js: js/page_load.js
 params:

@@ -26,9 +26,6 @@ models:
     label: Global site config
     fields:
       - type: string
-        label: Title
-        name: title
-      - type: string
         label: Snipcart public API key
         name: snipcart_api_key
       - type: object
