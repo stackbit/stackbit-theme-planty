@@ -8,6 +8,7 @@ dataDir: data
 pagesDir: content
 logicFields:
   - weight
+  - slug
   - logos
   - palette.sass
 metadata:

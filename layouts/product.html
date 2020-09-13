@@ -22,9 +22,11 @@
                 <h1 class="product__title">
                     {{ page.title }}
                 </h1>
+                {% if category_page %}
                 <h2 class="product__category"> 
                     <a href="{{ category_page.url | relative_url }}"> {{ category_page.title }} </a>
                 </h2>
+                {% endif %}
                 <div class="product__price">
                     ${{ page.params.price }}
                 </div>

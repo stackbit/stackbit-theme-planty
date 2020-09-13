@@ -8,7 +8,7 @@
                     {% set include_dict = {'image': product_page.params.default_thumbnail_image, 'alt': product_page.title, 'cssClass': 'product-grid__item-image'} %}
                     {% include "picture.html" %}
                     <figcaption>
-                        {% set include_dict= {'product_page': product_page, 'component': 'product-grid'} %}
+                        {% set include_dict = {'product_page': product_page, 'component': 'product-grid'} %}
                         {% include "small_buy_button.html" %}
                     </figcaption>
                 </figure>
