@@ -3,9 +3,8 @@ title: 'Planty'
 init_js: js/main.js
 page_load_js: js/page_load.js
 params:
-  logos:
-    dark: 'images/logo.svg'
-    light: 'images/logo-white.svg'
+  logo_dark: 'images/logo.svg'
+  logo_light: 'images/logo-white.svg'
   snipcart_api_key: ''
   palette: default
   palettes:

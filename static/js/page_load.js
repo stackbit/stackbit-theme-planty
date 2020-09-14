@@ -3,7 +3,7 @@ let hamburgerMenu = document.querySelector('.hamburger')
 let hamburgerMenuContent = document.querySelector('.hamburger__content')
 let nav = document.querySelector('.nav')
 let logo = document.querySelector('.nav__logo-image')
-let originalLogo = logo.src
+let originalLogo = logo ? logo.src : null
 let originalHeaderColor = nav.classList.contains('nav--dark') ? 'nav--dark' : 'nav--light'
 
 hamburgerMenu.addEventListener('click', _ => {

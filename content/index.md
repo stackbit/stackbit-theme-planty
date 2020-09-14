@@ -1,6 +1,7 @@
 ---
 layout: home
 title: Home
+actionCta: See all plants
 isHome: true
 ---
 

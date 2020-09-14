@@ -7,10 +7,10 @@
         <div class="nav__logo">
             <a href="{{ '/' | relative_url }}">
                 {% if isHome == true or page.layout == "product" %}
-                    {% set include_dict = {'image': site.params.logos.light, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
+                    {% set include_dict = {'image': site.params.logo_light, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
                     {% include "picture.html" %}
                 {% else %}
-                    {% set include_dict = {'image': site.params.logos.dark, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
+                    {% set include_dict = {'image': site.params.logo_dark, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
                     {% include "picture.html" %}
                 {% endif %}
             </a>

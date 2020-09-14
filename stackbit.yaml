@@ -8,6 +8,7 @@ dataDir: data
 pagesDir: content
 logicFields:
   - slug
+  - isHome
   - order
   - logos
   - palette.sass
@@ -29,16 +30,12 @@ models:
       - type: string
         label: Snipcart public API key
         name: snipcart_api_key
-      - type: object
-        label: Logos
-        name: logos
-        fields:
-          - type: image
-            name: light
-            label: Light
-          - type: image
-            name: dark
-            label: Dark
+      - type: image
+        name: logo_light
+        label: Logo Light
+      - type: image
+        name: logo_dark
+        label: Logo Dark
       - type: enum
         label: Color Palette
         name: palette
@@ -140,6 +137,9 @@ models:
       - type: string
         label: Title
         name: title
+      - type: string
+        label: Hero Action CTA
+        name: actionCta
       - type: boolean
         label: Is home page
         name: isHome
