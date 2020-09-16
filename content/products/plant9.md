@@ -10,7 +10,7 @@ featured_thumbnail_image: images/plant9-featured.jpg
 featured_original_image: images/plant9-featured-lg.jpg
 featured: true
 order: 9
-category: category/cactuses
+category: category/cactuses.md
 section: Store
 ---
 

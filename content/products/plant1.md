@@ -10,7 +10,7 @@ featured_thumbnail_image: images/plant1-featured.jpg
 featured_original_image: images/plant1-featured-lg.jpg
 featured: true
 order: 1
-category: category/bigplants
+category: category/bigplants.md
 section: Store
 ---
 

@@ -15,8 +15,9 @@
             <div class="product-grid__definition">
                 <a href="{{ product_page.url | relative_url }}"><h3 class="product-grid__title">{{ product_page.title }}</h3></a>
                 {% if product_page.params.category %}
-                    {% set category_page = getPage(product_page.params.category) %}
-                    <span class="product-grid__category"> {{ category_page.title }} </span>
+                    {% set category_path = product_page.params.category | trim_end('.md') %}
+                    {% set category_page = getPage(category_path) %}
+                    <span class="product-grid__category"> {{ category_page.params.title }} </span>
                 {% endif %}
                 <span class="product-grid__price"> ${{ product_page.params.price }} </span>
             </div>
