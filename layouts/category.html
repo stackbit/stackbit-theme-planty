@@ -12,9 +12,8 @@
             </nav>
             
             <section class="store__products">
-                {% set categoryUrl = page.url | trim_start('/') | trim_end('/') %}
-                {% set category_product_pages = getPages('/products') | where('category', categoryUrl ) | sort_array('order', 'asc') %}
-                {% set include_dict = {'product_pages': category_product_pages, 'cssClass': 'store__product-grid', 'site': site} %}
+                {% set product_pages = getPages('/products') | sort_array('order', 'asc') %}
+                {% set include_dict = {'product_pages': product_pages, 'category': page.slug, 'cssClass': 'store__product-grid', 'site': site} %}
                 {% include "product_grid.html" %}
             </section>
         </div>

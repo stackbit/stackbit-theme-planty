@@ -1,5 +1,6 @@
 {% extends "body.html" %}
 {% block content %}
+{% set category_page = getPageByReference(page.params.category) %}
     <main class="content">
         <section class="product content__row content__row--bleed">  
             <div class="product__background-left-overlay"></div>
@@ -22,8 +23,6 @@
                     {{ page.title }}
                 </h1>
 
-                {% set category_path = page.params.category | trim_end('.md') %}
-                {% set category_page = getPage(category_path) %}
                 {% if category_page %}
                 <h2 class="product__category"> 
                     <a href="{{ category_page.url | relative_url }}"> {{ category_page.title }} </a>
@@ -42,12 +41,15 @@
             </div>
         </section>
 
+        {% if category_page %}
         <section class="content__row">
             <h2 class="content__row-title">Related</h2>
-            {% set product_pages = getPages('/products') | where('category', page.params.category) | sort_array('order', 'asc') | where('id', '!=', page.params.id) %}
-            {% set include_dict = {'product_pages': product_pages, 'cssClass': 'product-grid--draggable', 'site': site} %}
+            {% set product_pages = getPages('/products') | sort_array('order', 'asc') | where('id', '!=', page.params.id) %}
+            {% set include_dict = {'product_pages': product_pages, 'category': category_page.slug, 'cssClass': 'store__product-grid', 'site': site} %}
+
             {% include "product_grid.html" %}
         </section>
+        {% endif %}
 
         <a href="{{ '/store' | relative_url }}" class="content__row content__row--bleed product__back-to-store">
             <svg width="20" height="10" viewBox="0 0 20 10" fill="none" xmlns="http://www.w3.org/2000/svg">

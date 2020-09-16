@@ -20,14 +20,10 @@
         {% for category_page in category_pages %}
             {% set categoryIndex = categoryIndex + 1 %}
             {% if categoryIndex < 3 %}
-                {% set categoryUrl = category_page.url | trim_start('/') | trim_end('/') %}
-                {% set category_product_pages = getPages('/products') | where('category', categoryUrl ) | sort_array('order', 'asc') %}
-                {% set count = category_product_pages | length %}
-                {% if count > 0 %}
-                    <h2 class="content__row-title">{{ category_page.title }}</h2>
-                    {% set include_dict = {'product_pages': category_product_pages, 'site': site, 'cssClass': 'product-grid--draggable'} %}
-                    {% include "product_grid.html" %}
-                {% endif %}
+                <h2 class="content__row-title">{{ category_page.title }}</h2>
+                {% set product_pages = getPages('/products') | sort_array('order', 'asc') %}
+                {% set include_dict = {'product_pages': product_pages, 'category': category_page.slug, 'cssClass': 'store__product-grid', 'site': site} %}
+                {% include "product_grid.html" %}
             {% endif %}
         {% endfor %}
     </section>

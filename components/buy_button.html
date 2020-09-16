@@ -1,5 +1,4 @@
 {% set product_page = include_dict.product_page %}
-{% set category_path = product_page.params.category | trim_end('.md') %}
 
 <button class="button button--std snipcart-add-item"
     data-item-name="{{ product_page.title }}"
@@ -8,7 +7,7 @@
     {% if product_page.params.default_thumbnail_image %} data-item-image="{{ product_page.params.default_thumbnail_image | relative_url }}" {% endif %}
     data-item-description="{{ product_page.params.description }}"
     {% if product_page.params.category %}
-        {% set category_page = getPage(category_path) %}
+        {% set category_page = getPageByReference(product_page.params.category) %}
         data-item-categories="{{ category_page.title }}"
     {% endif %}
     data-item-id="{{ product_page.params.id}}">
