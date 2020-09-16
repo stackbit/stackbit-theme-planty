@@ -244,9 +244,6 @@ models:
     folder: category
     urlPath: 'category/{slug}'
     fields:
-      - type: slug
-        name: slug
-        label: Slug
       - type: string
         name: title
         label: Title
