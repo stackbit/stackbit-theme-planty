@@ -7,7 +7,6 @@ uploadDir: images
 dataDir: data
 pagesDir: content
 logicFields:
-  - slug
   - isHome
   - order
   - logos

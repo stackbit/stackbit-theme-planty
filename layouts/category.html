@@ -13,7 +13,7 @@
             
             <section class="store__products">
                 {% set product_pages = getPages('/products') | sort_array('order', 'asc') %}
-                {% set include_dict = {'product_pages': product_pages, 'category': page.slug, 'cssClass': 'store__product-grid', 'site': site} %}
+                {% set include_dict = {'product_pages': product_pages, 'category': page.url, 'cssClass': 'store__product-grid', 'site': site} %}
                 {% include "product_grid.html" %}
             </section>
         </div>
