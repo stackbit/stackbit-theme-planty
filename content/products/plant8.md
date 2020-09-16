@@ -9,7 +9,7 @@ default_original_image: images/plant8-lg.jpg
 featured_thumbnail_image: images/plant8-featured.jpg
 featured_original_image: images/plant8-featured-lg.jpg
 order: 8
-category: summer
+category: category/summer
 section: Store
 ---
 

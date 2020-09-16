@@ -9,7 +9,7 @@ default_original_image: images/plant2-lg.jpg
 featured_thumbnail_image: images/plant2-featured.jpg
 featured_original_image: images/plant2-featured-lg.jpg
 order: 2
-category: cactuses
+category: category/cactuses
 section: Store
 ---
 

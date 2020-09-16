@@ -10,7 +10,7 @@ featured_thumbnail_image: images/plant3-featured.jpg
 featured_original_image: images/plant3-featured-lg.jpg
 featured: true
 order: 3
-category: cactuses
+category: category/cactuses
 section: Store
 ---
 

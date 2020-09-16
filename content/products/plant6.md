@@ -9,7 +9,7 @@ default_original_image: images/plant6-lg.jpg
 featured_thumbnail_image: images/plant6-featured.jpg
 featured_original_image: images/plant6-featured-lg.jpg
 order: 6
-category: bigplants
+category: category/bigplants
 section: Store
 ---
 

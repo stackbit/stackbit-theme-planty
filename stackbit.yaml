@@ -343,11 +343,10 @@ models:
       - type: image
         label: Featured Original Image
         name: featured_original_image
-      - type: enum
+      - type: reference
         name: category
         label: Category
-        # To keep up to date with categories created in content/category
-        options: [summer, europe, bigplants, cactuses]
+        models: [category]
       - type: enum
         name: section
         label: Section
