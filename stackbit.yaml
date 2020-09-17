@@ -7,7 +7,6 @@ uploadDir: images
 dataDir: data
 pagesDir: content
 logicFields:
-  - slug
   - isHome
   - order
   - logos
@@ -140,6 +139,12 @@ models:
       - type: string
         label: Hero Action CTA
         name: actionCta
+      - type: list
+        name: featured_categories
+        label: Featured Categories
+        items:
+          - type: reference
+            models: [category]
       - type: boolean
         label: Is home page
         name: isHome
@@ -236,17 +241,23 @@ models:
             - type: image
               name: image
               label: Bulletpoint image
-  category:
+  categoryPage:
     type: page
     label: Category
+    folder: category
     hideContent: true
     layout: category
-    folder: category
     urlPath: 'category/{slug}'
     fields:
-      - type: slug
-        name: slug
-        label: Slug
+      - type: reference
+        name: category
+        label: Category
+        models: [category]
+  category:
+    type: data
+    label: Category
+    folder: category
+    fields:
       - type: string
         name: title
         label: Title
@@ -337,17 +348,10 @@ models:
       - type: image
         label: Default Original Image
         name: default_original_image
-      - type: image
-        label: Featured Thumbnail Image
-        name: featured_thumbnail_image
-      - type: image
-        label: Featured Original Image
-        name: featured_original_image
-      - type: enum
+      - type: reference
         name: category
         label: Category
-        # To keep up to date with categories created in content/category
-        options: [summer, europe, bigplants, cactuses]
+        models: [category]
       - type: enum
         name: section
         label: Section

@@ -1,7 +1,5 @@
 ---
-title: Big plants
-slug: bigplants
+category: data/category/bigplants.yaml
 layout: category
-order: 1
 section: Store
 ---

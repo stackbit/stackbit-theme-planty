@@ -1,7 +1,5 @@
 ---
-title: Cactuses
-slug: cactuses
+category: data/category/cactuses.yaml
 layout: category
-order: 2
 section: Store
 ---

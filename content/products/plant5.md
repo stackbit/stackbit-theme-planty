@@ -6,11 +6,9 @@ title: Vestibulum eget
 description: Donec finibus, augue in sagittis auctor, mi neque convallis arcu, quis volutpat massa dolor id purus.
 default_thumbnail_image: images/plant5.jpg
 default_original_image: images/plant5-lg.jpg
-featured_thumbnail_image: images/plant5-featured.jpg
-featured_original_image: images/plant5-featured-lg.jpg
 featured: true
 order: 5
-category: bigplants
+category: data/category/bigplants.yaml
 section: Store
 ---
 

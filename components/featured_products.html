@@ -1,22 +1,7 @@
 {% set product_pages = include_dict.featured_product_pages %}
 <ul class="product-grid product-grid--draggable">
     {% for product_page in product_pages %}
-        <li class="product-grid__item">
-            <a href="{{ product_page.url | relative_url }}">
-                <figure class="js-figure-link product-grid__item-figure js-figure-link">
-                    {% set include_dict = {'image': product_page.params.featured_thumbnail_image, 'alt': product_page.title, 'cssClass': 'product-grid__item-image product-grid__item-image--featured'} %}
-                    {% include "picture.html" %}
-                    <figcaption>
-                        {% set include_dict = {'product_page': product_page, 'component': 'product-grid'} %}
-                        {% include "small_buy_button.html" %}
-                    </figcaption>
-                </figure>
-            </a>
-            <div class="product-grid__definition">
-                <a href="{{ product_page.url | relative_url }}"><h3 class="product-grid__title">{{ product_page.title }}</h3></a>
-                <span class="product-grid__category"> {{ product_page.params.category }} </span>
-                <span class="product-grid__price"> ${{ product_page.params.price }} </span>
-            </div>
-        </li>
+        {% set include_dict = { 'product_page': product_page, 'site': site } %}
+        {% include "product_grid_item.html" %}
     {% endfor %}
 </ul>

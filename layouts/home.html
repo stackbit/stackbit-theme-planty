@@ -10,24 +10,17 @@
         </h2>
 
         {% set featured_product_pages = getPages('/products') | where('featured', true) | sort_array('order', 'asc') %}
-        {% set include_dict = {'featured_product_pages': featured_product_pages} %}
+        {% set include_dict = {'featured_product_pages': featured_product_pages, 'site': site} %}
         {% include "featured_products.html" %}
     </section>
 
     <section class="content__row">
-        {% set category_pages = getPages('/category') | sort_array('order', 'asc') %}
-        {% set categoryIndex = 0 %}
-        {% for category_page in category_pages %}
-            {% set categoryIndex = categoryIndex + 1 %}
-            {% if categoryIndex < 3 %}
-                {% set category_product_pages = getPages('/products') | where('category', category_page.params.slug) | sort_array('order', 'asc') %}
-                {% set count = category_product_pages | length %}
-                {% if count > 0 %}
-                    <h2 class="content__row-title">{{ category_page.title }}</h2>
-                    {% set include_dict = {'product_pages': category_product_pages, 'cssClass': 'product-grid--draggable'} %}
-                    {% include "product_grid.html" %}
-                {% endif %}
-            {% endif %}
+        {% for category in page.params.featured_categories %}
+            {% set category_data = getData(category) %}
+            <h2 class="content__row-title">{{ category_data.title }}</h2>
+            {% set product_pages = getPages('/products') | sort_array('order', 'asc') %}
+            {% set include_dict = {'product_pages': product_pages, 'category_id': category_data.id, 'cssClass': 'store__product-grid', 'site': site} %}
+            {% include "product_grid.html" %}
         {% endfor %}
     </section>
 

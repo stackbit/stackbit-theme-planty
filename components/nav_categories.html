@@ -1,12 +1,11 @@
 {% set site = include_dict.site %}
 {% set page = include_dict.page %}
 <ul class="store__nav-items">
-    {% set category_pages = getPages('/category') | sort_array('order', 'asc') %}
-    {% for item in category_pages %}
+    {% for key, item in site.data.category %}
         {% set isCurrentPage = page.title == item.title %}
         {% set isActive = true if isCurrentPage else false %}
         <li class="store__nav-item">
-            <a href="{{ item.url | relative_url }}" {{ classNames('store__nav-item-link', {'store__nav-item-link--active': isActive}) }}>
+            <a {% if item.url %}href="{{ item.url | relative_url }}"{% endif %} {{ classNames('store__nav-item-link', {'store__nav-item-link--active': isActive}) }}>
                 {{ item.title }}
             </a>
         </li>

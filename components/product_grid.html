@@ -1,23 +1,20 @@
+{% set site = include_dict.site %}
 {% set product_pages = include_dict.product_pages %}
 {% set listCssClass = include_dict.cssClass %}
+{% set category_id = include_dict.category_id %}
 <ul class="product-grid {% if listCssClass %}{{ listCssClass }}{%endif%}">
     {% for product_page in product_pages %}
-        <li class="product-grid__item">
-            <a href="{{ product_page.url | relative_url }}">
-                <figure class="product-grid__item-figure js-figure-link">
-                    {% set include_dict = {'image': product_page.params.default_thumbnail_image, 'alt': product_page.title, 'cssClass': 'product-grid__item-image'} %}
-                    {% include "picture.html" %}
-                    <figcaption>
-                        {% set include_dict = {'product_page': product_page, 'component': 'product-grid'} %}
-                        {% include "small_buy_button.html" %}
-                    </figcaption>
-                </figure>
-            </a>
-            <div class="product-grid__definition">
-                <a href="{{ product_page.url | relative_url }}"><h3 class="product-grid__title">{{ product_page.title }}</h3></a>
-                <span class="product-grid__category"> {{ product_page.params.category }} </span>
-                <span class="product-grid__price"> ${{ product_page.params.price }} </span>
-            </div>
-        </li>
+        {% if not category_id %}
+            {% set include_dict = { 'product_page': product_page, 'site': site } %}
+            {% include "product_grid_item.html" %}
+        {% else %}
+            {% if product_page.params.category %}
+                {% set category = getData(product_page.params.category) %}
+                {% if category_id == category.id %}
+                    {% set include_dict = { 'product_page': product_page, 'site': site } %}
+                    {% include "product_grid_item.html" %}
+                {% endif %}
+            {% endif %}
+        {% endif %}
     {% endfor %}
 </ul>

@@ -5,7 +5,10 @@
     data-item-name="{{ product_page.title }}"
     data-item-url="{{ product_page.url }}"
     data-item-price="{{ product_page.params.price }}"
-    data-item-categories="{{ product_page.params.category }}"
+    {% if product_page.params.category %}
+        {% set category = getData(product_page.params.category) %}
+        data-item-categories="{{ category.title }}"
+    {% endif %}
     {% if product_page.params.default_thumbnail_image %} data-item-image="{{ product_page.params.default_thumbnail_image | relative_url }}" {% endif %}
     data-item-description="{{ product_page.params.description }}"
     data-item-id="{{ product_page.params.id}}">

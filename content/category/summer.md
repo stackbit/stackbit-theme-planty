@@ -1,7 +1,5 @@
 ---
-title: Summer plants
-slug: summer
+category: data/category/summer.yaml
 layout: category
-order: 4
 section: Store
 ---

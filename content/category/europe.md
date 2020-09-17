@@ -1,7 +1,5 @@
 ---
-title: Plants from Europe
-slug: europe
+category: data/category/europe.yaml
 layout: category
-order: 3
 section: Store
 ---
