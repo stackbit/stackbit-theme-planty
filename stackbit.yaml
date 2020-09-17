@@ -337,12 +337,6 @@ models:
       - type: image
         label: Default Original Image
         name: default_original_image
-      - type: image
-        label: Featured Thumbnail Image
-        name: featured_thumbnail_image
-      - type: image
-        label: Featured Original Image
-        name: featured_original_image
       - type: enum
         name: category
         label: Category
