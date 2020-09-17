@@ -1,6 +1,6 @@
 ---
 title: Cactuses
-slug: cactuses
+id: cactuses
 layout: category
 order: 2
 section: Store

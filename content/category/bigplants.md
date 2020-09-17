@@ -1,6 +1,6 @@
 ---
 title: Big plants
-slug: bigplants
+id: bigplants
 layout: category
 order: 1
 section: Store

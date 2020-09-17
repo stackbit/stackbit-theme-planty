@@ -7,7 +7,6 @@ uploadDir: images
 dataDir: data
 pagesDir: content
 logicFields:
-  - slug
   - isHome
   - order
   - logos
@@ -244,9 +243,9 @@ models:
     folder: category
     urlPath: 'category/{slug}'
     fields:
-      - type: slug
-        name: slug
-        label: Slug
+      - type: string
+        name: id
+        label: Id
       - type: string
         name: title
         label: Title

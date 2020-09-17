@@ -20,7 +20,7 @@
         {% for category_page in category_pages %}
             {% set categoryIndex = categoryIndex + 1 %}
             {% if categoryIndex < 3 %}
-                {% set category_product_pages = getPages('/products') | where('category', category_page.params.slug) | sort_array('order', 'asc') %}
+                {% set category_product_pages = getPages('/products') | where('category', category_page.params.id) | sort_array('order', 'asc') %}
                 {% set count = category_product_pages | length %}
                 {% if count > 0 %}
                     <h2 class="content__row-title">{{ category_page.title }}</h2>

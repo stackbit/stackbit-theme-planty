@@ -1,6 +1,6 @@
 ---
 title: Summer plants
-slug: summer
+id: summer
 layout: category
 order: 4
 section: Store

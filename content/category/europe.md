@@ -1,6 +1,6 @@
 ---
 title: Plants from Europe
-slug: europe
+id: europe
 layout: category
 order: 3
 section: Store

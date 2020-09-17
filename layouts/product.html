@@ -1,6 +1,6 @@
 {% extends "body.html" %}
 {% block content %}
-    {% set category_page = getPages('/category') | where('slug', page.params.category) | first %}
+    {% set category_page = getPages('/category') | where('id', page.params.category) | first %}
     <main class="content">
         <section class="product content__row content__row--bleed">  
             <div class="product__background-left-overlay"></div>
@@ -42,7 +42,7 @@
 
         <section class="content__row">
             <h2 class="content__row-title">Related</h2>
-            {% set product_pages = getPages('/products') | where('category', category_page.params.slug) | sort_array('order', 'asc') | where('id', '!=', page.params.id) %}
+            {% set product_pages = getPages('/products') | where('category', category_page.params.id) | sort_array('order', 'asc') | where('id', '!=', page.params.id) %}
             {% set include_dict = {'product_pages': product_pages, 'cssClass': 'product-grid--draggable'} %}
             {% include "product_grid.html" %}
         </section>
