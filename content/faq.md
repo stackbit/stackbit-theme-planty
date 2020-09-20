@@ -4,9 +4,12 @@ layout: advanced
 page_css_class: gray-background
 sections:
     - type: header_section
+      section_id: header_section
+      background_image: /images/leaf-light-grey.svg
       headline: Behold our FAQ
       subtitle: All right, friends. Let’s do this. This section will cover basic, frequently asked questions for e-commerce merchants.
     - type: faq_section
+      section_id: faq_section
       questions:
           - question: How long does shipping take?
             answer: >-

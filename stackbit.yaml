@@ -33,6 +33,9 @@ models:
       - type: image
         name: logo_dark
         label: Logo Dark
+      - type: image
+        name: hamburger_background_image
+        label: Hamburger menu background image
       - type: enum
         label: Color Palette
         name: palette
@@ -223,8 +226,8 @@ models:
     label: Hero Section
     fields:
       - type: image
-        name: image
-        label: Image
+        name: background_image
+        label: Background Image
         description: The image shown in the background of the section.
       - type: markdown
         name: content
@@ -320,6 +323,9 @@ models:
     type: object
     label: Header section
     fields:
+      - type: image
+        label: Background image
+        name: background_image
       - type: string
         label: Headline
         name: headline
