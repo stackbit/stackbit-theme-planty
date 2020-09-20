@@ -225,6 +225,9 @@ models:
     type: object
     label: Hero Section
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: image
         name: background_image
         label: Background Image
@@ -266,6 +269,9 @@ models:
     label: Categories Section
     fields:
       - type: string
+        name: section_id
+        label: Section ID
+      - type: string
         name: title
         label: Title
       - type: list
@@ -277,10 +283,17 @@ models:
   store_section:
     type: object
     label: Store Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
   promotion_section:
     type: object
     label: Promotion
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: string
         name: title
         label: Title
@@ -298,6 +311,9 @@ models:
     type: object
     label: Testimonials
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: list
         name: testimonials
         label: Testimonials
@@ -323,6 +339,9 @@ models:
     type: object
     label: Header section
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: image
         label: Background image
         name: background_image
@@ -336,6 +355,9 @@ models:
     type: object
     label: FAQ Section
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: list
         name: questions
         label: Questions
@@ -353,10 +375,17 @@ models:
   contact_section:
     type: object
     label: Contact Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
   bulletpoints_section:
     type: object
     label: Bulletpoints Section
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: list
         name: bulletpoints
         label: Bulletpoints
