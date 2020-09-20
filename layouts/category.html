@@ -3,9 +3,15 @@
 {% set store_page = getPage('/store') %}
 <main class="content{% if store_page.params.page_css_class %} {{store_page.params.page_css_class}}{%endif%}">
     {% for section in store_page.params.sections %}
-    {% set include_dict = {'section': section, 'site': site} %}
-    {% set component = section.type | component_file %}
-    {% include component %}
+        {% if section.type === 'store_section' %}
+            {% set include_dict = {'section': section, 'category_url': page.url, 'site': site} %}
+            {% set component = section.type | component_file %}
+            {% include component %}
+        {% else %}
+            {% set include_dict = {'section': section, 'site': site} %}
+            {% set component = section.type | component_file %}
+            {% include component %}
+        {% endif %}
     {% endfor %}
 </main>
 {% endblock %}
