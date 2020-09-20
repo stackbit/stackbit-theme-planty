@@ -1,5 +1,5 @@
 {% set section = include_dict.section %}
-<section class="content__row content__row--bleed">
+<section class="content__row content__row--bleed"  data-id="{{section.id}}">
     <div class="promo">
         {% set include_dict = {'image': section.image, 'alt': section.title} %}
         {% include "picture.html" %}

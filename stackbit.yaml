@@ -234,7 +234,7 @@ models:
         name: actions
         label: Action Buttons
         items:
-          type: reference
+          type: model
           models: [action]
   featured_products_section:
     type: object
@@ -243,6 +243,9 @@ models:
       - type: string
         name: title
         label: Title
+      - type: string
+        name: section_id
+        label: Section ID
       - type: boolean
         name: light_title
         label: Light title
