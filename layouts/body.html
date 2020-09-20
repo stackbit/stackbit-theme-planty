@@ -1,18 +1,7 @@
 {% extends "base.html" %}
 {% block body %} 
-    {% if page.url == "/" %}
-        <div class="header-wrapper">
-            <div class="header-wrapper__overlay">
-                {% set include_dict = {'page': page} %}
-                {% include "hero.html" %}
-                {% set include_dict = {'page': page, 'site': site} %}
-                {% include "header.html" %}
-            </div>
-        </div>
-    {% else %}
-        {% set include_dict = {'page': page, 'site': site} %}
-        {% include "header.html" %}
-    {% endif %}
+    {% set include_dict = {'page': page, 'site': site} %}
+    {% include "header.html" %}
 
     {% block content %}{% endblock %}
 

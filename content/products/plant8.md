@@ -6,8 +6,6 @@ title: Fusce sed
 description: In cursus sagittis eros non congue.
 default_thumbnail_image: images/plant8.jpg
 default_original_image: images/plant8-lg.jpg
-featured_thumbnail_image: images/plant8-featured.jpg
-featured_original_image: images/plant8-featured-lg.jpg
 order: 8
 category: category/summer.md
 section: Store

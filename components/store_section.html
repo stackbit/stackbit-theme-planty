@@ -1,0 +1,16 @@
+{% set section = include_dict.section %}
+<div class="content__row content__row--direction-row store__head">
+    <h1 class="store__title">All Products</h1>
+</div>
+
+<div class="content__row store__container">
+    <nav class="store__nav">
+        {% set include_dict = {'page': page, 'site': site} %}
+        {% include "nav_categories.html" %}
+    </nav>
+    <section class="store__products">
+        {% set product_pages = getPages('/products') | sort_array('order', 'asc') %}
+        {% set include_dict = {'product_pages': product_pages, 'cssClass': 'store__product-grid', 'site': site} %}
+        {% include "product_grid.html" %}
+    </section>
+</div>

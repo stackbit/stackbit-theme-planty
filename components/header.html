@@ -1,16 +1,16 @@
 {% set page = include_dict.page %}
 {% set site = include_dict.site %}
-{% set isHome = page.params.isHome | default(false, true) %}
+{% set white_header = page.params.white_header | default(false, true) %}
 
 <header class="header">
-    <nav {{ classNames('nav', {'nav--light': isHome, 'nav--dark': isHome != true}) }}>
+    <nav {{ classNames('nav', {'nav--light': white_header, 'nav--dark': white_header != true}) }}>
         <div class="nav__logo">
             <a href="{{ '/' | relative_url }}">
-                {% if isHome == true or page.layout == "product" %}
-                    {% set include_dict = {'image': site.params.logo_light, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
+                {% if white_header or page.layout == "product" %}
+                    {% set include_dict = {'image': site.params.logo_light, 'cssClass': 'nav__logo-image', 'alt': 'Planty logo'} %}
                     {% include "picture.html" %}
                 {% else %}
-                    {% set include_dict = {'image': site.params.logo_dark, 'cssClass': 'footer_logo nav__logo-image', 'alt': 'Planty logo'} %}
+                    {% set include_dict = {'image': site.params.logo_dark, 'cssClass': 'nav__logo-image', 'alt': 'Planty logo'} %}
                     {% include "picture.html" %}
                 {% endif %}
             </a>

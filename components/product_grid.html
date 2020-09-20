@@ -1,16 +1,16 @@
 {% set site = include_dict.site %}
 {% set product_pages = include_dict.product_pages %}
 {% set listCssClass = include_dict.cssClass %}
-{% set category = include_dict.category %}
+{% set category_url = include_dict.category_url %}
 <ul class="product-grid {% if listCssClass %}{{ listCssClass }}{%endif%}">
     {% for product_page in product_pages %}
-        {% if not category %}
+        {% if not category_url %}
             {% set include_dict = { 'product_page': product_page, 'site': site } %}
             {% include "product_grid_item.html" %}
         {% else %}
             {% if product_page.params.category %}
-                {% set category_p = getPageByReference(product_page.params.category) %}
-                {% if category == category_p.url %}
+                {% set category_page = getPageByReference(product_page.params.category) %}
+                {% if category_url == category_page.url %}
                     {% set include_dict = { 'product_page': product_page, 'site': site } %}
                     {% include "product_grid_item.html" %}
                 {% endif %}

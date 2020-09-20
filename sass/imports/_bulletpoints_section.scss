@@ -1,6 +1,8 @@
-.about {
+.gray-background {
   background-color: #f9f9f9;
+}
 
+.bulletpoint {
   &__section {
     display: flex;
     max-width: 1000px;
