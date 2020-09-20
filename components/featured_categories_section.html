@@ -1,6 +1,6 @@
 {% set section = include_dict.section %}
 
-<section class="content__row"  data-id="{{section.id}}">
+<section class="content__row" data-id="{{section.section_id}}">
     {% set categories = section.featured_categories %}
     {% for category in categories %}
         {% set category_page = getPageByReference(category) %}
