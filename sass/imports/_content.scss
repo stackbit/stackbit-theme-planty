@@ -6,7 +6,8 @@
         @include container-item-properties;
         margin-bottom: 50px;
         &--direction-row { display: flex; flex-direction: row; }
-        &--bleed         { padding: 0; margin-bottom:0; max-width: none; }
+        &--full-width         { max-width: none; }
+        &--mb-0         { margin-bottom: 0; }
         @include smaller-than-tablet {
             overflow: hidden;
         }
