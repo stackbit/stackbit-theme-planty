@@ -5,7 +5,6 @@ white_header: true
 sections:
   - type: hero_section
     section_id: hero_section
-    title: Hero Section
     background_image: images/header.jpg
     content: |-
         # Real, beautiful plants right to your door
@@ -50,4 +49,3 @@ sections:
       title: Discover
       url: "/store"
 ---
- 
