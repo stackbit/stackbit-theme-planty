@@ -6,7 +6,7 @@
         @include container-item-properties;
         margin-bottom: 50px;
         &--direction-row { display: flex; flex-direction: row; }
-        &--full-width         { max-width: none; }
+        &--full-width         { max-width: none; padding: 0; }
         &--mb-0         { margin-bottom: 0; }
         @include smaller-than-tablet {
             overflow: hidden;

@@ -9,7 +9,7 @@
             {% include "product_grid_item.html" %}
         {% else %}
             {% if product_page.params.category %}
-                {% set category_page = getPageByReference(product_page.params.category) %}
+                {% set category_page = getPageByFilePath(product_page.params.category) %}
                 {% if category_url == category_page.url %}
                     {% set include_dict = { 'product_page': product_page, 'site': site } %}
                     {% include "product_grid_item.html" %}
