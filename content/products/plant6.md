@@ -7,7 +7,7 @@ description: Cras molestie faucibus ipsum ut vulputate.
 default_thumbnail_image: images/plant6.jpg
 default_original_image: images/plant6-lg.jpg
 order: 6
-category: category/bigplants.md
+category: content/category/bigplants.md
 section: Store
 ---
 

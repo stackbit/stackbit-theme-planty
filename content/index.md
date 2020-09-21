@@ -18,15 +18,15 @@ sections:
     icon: true
     light_title: true
     featured_products:
-      - products/plant1.md
-      - products/plant3.md
-      - products/plant5.md
-      - products/plant7.md
+      - content/products/plant1.md
+      - content/products/plant3.md
+      - content/products/plant5.md
+      - content/products/plant7.md
   - type: featured_categories_section
     section_id: featured_categories_section
     featured_categories:
-      - category/bigplants.md
-      - category/cactuses.md
+      - content/category/bigplants.md
+      - content/category/cactuses.md
   - type: testimonials_section
     section_id: testimonials_section
     testimonials:
