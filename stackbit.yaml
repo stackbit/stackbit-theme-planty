@@ -379,6 +379,24 @@ models:
       - type: string
         name: section_id
         label: Section ID
+      - type: image
+        name: image
+        label: Image
+      - type: string
+        name: address
+        label: Address
+      - type: string
+        name: phone
+        label: Phone
+      - type: string
+        name: email
+        label: Email
+      - type: string
+        name: mapUrl
+        label: Map URL
+      - type: string
+        name: section_id
+        label: Section ID
   bulletpoints_section:
     type: object
     label: Bulletpoints Section

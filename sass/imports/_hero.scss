@@ -26,8 +26,12 @@
 
     &__title {
         font-family: $font_family_primairy;
+        color: white;
+
+
         h1 {
             color: $color_default;
+            margin: 0 auto 15px;
             max-width: 720px;
             font-size: $spacing--unit*8;
             font-weight: 900;
