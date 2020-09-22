@@ -48,6 +48,10 @@ models:
         name: bg_image_product
         label: Product Backround Image
         description: Product Backround Image (JPG or PNG)
+      - type: image
+        name: bg_image_cart
+        label: Cart Backround Image
+        description: Cart Backround Image (JPG or PNG)
       - type: enum
         label: Color Palette
         name: palette
@@ -107,10 +111,6 @@ models:
           - type: string
             label: Light grey
             name: light_grey
-          - type: image
-            name: bg_image_cart
-            label: Cart Backround Image
-            description: Cart Backround Image (JPG or PNG)
   home:
     type: page
     label: Home
