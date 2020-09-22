@@ -33,6 +33,25 @@ models:
       - type: image
         name: logo_dark
         label: Logo Dark
+      - type: image
+        name: hamburger_background_image
+        label: Hamburger menu background image
+      - type: image
+        name: bg_image_primary
+        label: Primary Backround Image
+        description: Primary Backround Image (JPG or PNG)
+      - type: image
+        name: bg_image_secondary
+        label: Secondary Backround Image
+        description: Secondary Backround Image (JPG or PNG)
+      - type: image
+        name: bg_image_product
+        label: Product Backround Image
+        description: Product Backround Image (JPG or PNG)
+      - type: image
+        name: bg_image_cart
+        label: Cart Backround Image
+        description: Cart Backround Image (JPG or PNG)
       - type: enum
         label: Color Palette
         name: palette
@@ -92,25 +111,6 @@ models:
           - type: string
             label: Light grey
             name: light_grey
-          - type: image
-            name: hamburger_background_image
-            label: Hamburger menu background image
-          - type: image
-            name: bg_image_primary
-            label: Primary Backround Image
-            description: Primary Backround Image (JPG or PNG)
-          - type: image
-            name: bg_image_secondary
-            label: Secondary Backround Image
-            description: Secondary Backround Image (JPG or PNG)
-          - type: image
-            name: bg_image_product
-            label: Product Backround Image
-            description: Product Backround Image (JPG or PNG)
-          - type: image
-            name: bg_image_cart
-            label: Cart Backround Image
-            description: Cart Backround Image (JPG or PNG)
   home:
     type: page
     label: Home

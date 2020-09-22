@@ -5,6 +5,11 @@ page_load_js: js/page_load.js
 params:
   logo_dark: 'images/logo.svg'
   logo_light: 'images/logo-white.svg'
+  hamburger_background_image: /images/leaf-light-grey.svg
+  bg_image_primary: /images/header.jpg
+  bg_image_secondary: /images/leaf-light-grey.svg
+  bg_image_product: /images/leaf.svg
+  bg_image_cart: /images/header.jpg
   snipcart_api_key: ''
   palette: default
   palettes:
@@ -20,11 +25,6 @@ params:
         active_dark: '#547567'
         dark_grey: '#273132'
         light_grey: '#6B797A'
-        hamburger_background_image: /images/leaf-light-grey.svg
-        bg_image_primary: /images/header.jpg
-        bg_image_secondary: /images/leaf-light-grey.svg
-        bg_image_product: /images/leaf.svg
-        bg_image_cart: /images/header.jpg
   main_menu:
     - title: Store
       url: /store

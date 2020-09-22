@@ -4,7 +4,7 @@
         {% set include_dict = {'image': section.image, 'alt': section.title} %}
         {% include "picture.html" %}
 
-        <div class="promo__message-container"  style="background-image: url({{site.params.palettes[site.params.palette].sass.bg_image_product}})">
+        <div class="promo__message-container"  style="background-image: url({{site.params.bg_image_product}})">
             <h2 class="promo__title">{{ section.title }}</h2>
             <p class="promo__subtitle">{{ section.subtitle }}</p>
             {% if section.cta %}
