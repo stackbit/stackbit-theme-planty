@@ -119,24 +119,6 @@ models:
     file: index.md
     singleInstance: true
     extends: advancedPageFields
-  page:
-    type: page
-    label: Page
-    layout: page
-    fields:
-      - type: string
-        name: title
-        label: Title
-        description: The title of the page
-        required: true
-      - type: string
-        name: headline
-        label: Headline
-        description: The title of the page
-        required: true
-      - type: markdown
-        label: Subtitle
-        name: subtitle
   advanced:
     type: page
     label: Advanced Page
