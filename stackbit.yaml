@@ -7,9 +7,7 @@ uploadDir: images
 dataDir: data
 pagesDir: content
 logicFields:
-  - isHome
   - order
-  - logos
   - palette.sass
 metadata:
   title: Planty
@@ -35,6 +33,9 @@ models:
       - type: image
         name: logo_dark
         label: Logo Dark
+      - type: image
+        name: hamburger_background_image
+        label: Hamburger menu background image
       - type: enum
         label: Color Palette
         name: palette
@@ -130,19 +131,10 @@ models:
     type: page
     label: Home
     layout: home
+    hideContent: true
     file: index.md
     singleInstance: true
-    fields:
-      - type: string
-        label: Title
-        name: title
-      - type: string
-        label: Hero Action CTA
-        name: actionCta
-      - type: boolean
-        label: Is home page
-        name: isHome
-        hidden: true
+    extends: advancedPageFields
   page:
     type: page
     label: Page
@@ -161,6 +153,16 @@ models:
       - type: markdown
         label: Subtitle
         name: subtitle
+  advanced:
+    type: page
+    label: Advanced Page
+    hideContent: true
+    layout: advanced
+    folder: advanced
+    exclude:
+      - "store.md"
+      - "index.md"
+    extends: advancedPageFields
   store:
     type: page
     label: Store
@@ -168,73 +170,38 @@ models:
     file: store.md
     singleInstance: true
     hideContent: true
+    extends: advancedPageFields
+  advancedPageFields:
+    type: object
     fields:
       - type: string
         label: Title
         name: title
-  faq:
-    type: page
-    label: FAQ
-    layout: faq
-    file: faq.md
-    singleInstance: true
-    fields:
+        description: The title of the page
+        required: true
       - type: string
-        name: title
-        label: Title
-      - type: string
-        name: headline
-        label: Headline
-      - type: markdown
-        name: subtitle
-        label: Subtitle
+        name: page_css_class
+        label: Page CSS class
+      - type: boolean
+        label: White header
+        name: white_header
       - type: list
-        name: questions
-        label: Questions
-        description: List of questions to show on the FAQ page
+        name: sections
+        label: Sections
+        description: Page sections
         items:
-          type: object
-          labelField: question
-          fields:
-            - type: string
-              name: question
-              label: Question
-            - type: markdown
-              name: answer
-              label: Answer
-  about:
-    type: page
-    label: About
-    layout: about
-    file: about.md
-    singleInstance: true
-    fields:
-      - type: string
-        label: Title
-        name: title
-      - type: string
-        label: Headline
-        name: headline
-      - type: markdown
-        label: Subtitle
-        name: subtitle
-      - type: list
-        name: bulletpoints
-        label: Bulletpoints
-        description: List of bulletpoints to show on About page
-        items:
-          type: object
-          labelField: title
-          fields:
-            - type: string
-              name: title
-              label: Title
-            - type: markdown
-              name: description
-              label: Description
-            - type: image
-              name: image
-              label: Bulletpoint image
+          type: model
+          models:
+            - hero_section
+            - header_section
+            - featured_products_section
+            - featured_categories_section
+            - testimonials_section
+            - promotion_section
+            - store_section
+            - faq_section
+            - bulletpoints_section
+            - contact_section
   category:
     type: page
     label: Category
@@ -243,9 +210,6 @@ models:
     folder: category
     urlPath: 'category/{slug}'
     fields:
-      - type: string
-        name: id
-        label: Id
       - type: string
         name: title
         label: Title
@@ -257,11 +221,79 @@ models:
         name: section
         label: Section
         options: [Store, About, Home]
-  promotion:
-    type: data
-    file: promotion.json
+  hero_section:
+    type: object
+    label: Hero Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        name: background_image
+        label: Background Image
+        description: The image shown in the background of the section.
+      - type: markdown
+        name: content
+        label: Content
+        description: The text content of the section.
+      - type: list
+        name: actions
+        label: Action Buttons
+        items:
+          type: model
+          models: [action]
+  featured_products_section:
+    type: object
+    label: Featured Products Section
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: boolean
+        name: light_title
+        label: Light title
+      - type: boolean
+        name: icon
+        label: Show Heart Icon
+      - type: list
+        name: featured_products
+        label: Featured Products
+        items:
+          type: reference
+          models: [product]
+  featured_categories_section:
+    type: object
+    label: Categories Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: string
+        name: title
+        label: Title
+      - type: list
+        name: featured_categories
+        label: Featured Categories
+        items:
+          type: reference
+          models: [category]
+  store_section:
+    type: object
+    label: Store Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+  promotion_section:
+    type: object
     label: Promotion
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: string
         name: title
         label: Title
@@ -271,23 +303,19 @@ models:
       - type: image
         name: image
         label: Promotion Image
-      - type: object
+      - type: model
         name: cta
         label: Call to action
-        fields:
-          - type: string
-            name: text
-            label: Text
-          - type: string
-            name: link
-            label: Link
-  testimonials:
-    type: data
-    file: testimonials.json
+        models: [action]
+  testimonials_section:
+    type: object
     label: Testimonials
     fields:
+      - type: string
+        name: section_id
+        label: Section ID
       - type: list
-        name: data
+        name: testimonials
         label: Testimonials
         description: A list of testimonials
         items:
@@ -307,6 +335,74 @@ models:
                 - type: string
                   name: location
                   label: Location
+  header_section:
+    type: object
+    label: Header section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: image
+        label: Background image
+        name: background_image
+      - type: string
+        label: Headline
+        name: headline
+      - type: markdown
+        label: Subtitle
+        name: subtitle
+  faq_section:
+    type: object
+    label: FAQ Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: list
+        name: questions
+        label: Questions
+        description: List of questions to show on the FAQ page
+        items:
+          type: object
+          labelField: question
+          fields:
+            - type: string
+              name: question
+              label: Question
+            - type: markdown
+              name: answer
+              label: Answer
+  contact_section:
+    type: object
+    label: Contact Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+  bulletpoints_section:
+    type: object
+    label: Bulletpoints Section
+    fields:
+      - type: string
+        name: section_id
+        label: Section ID
+      - type: list
+        name: bulletpoints
+        label: Bulletpoints
+        description: List of bulletpoints to show on About page
+        items:
+          type: object
+          labelField: title
+          fields:
+            - type: string
+              name: title
+              label: Title
+            - type: markdown
+              name: description
+              label: Description
+            - type: image
+              name: image
+              label: Bulletpoint image
   product:
     type: page
     label: Product
@@ -336,11 +432,10 @@ models:
       - type: image
         label: Default Original Image
         name: default_original_image
-      - type: enum
+      - type: reference
         name: category
         label: Category
-        # To keep up to date with categories created in content/category
-        options: [summer, europe, bigplants, cactuses]
+        models: [category]
       - type: enum
         name: section
         label: Section
@@ -363,3 +458,6 @@ models:
         label: URL
         required: true
         widget: url
+      - type: boolean
+        name: arrow
+        label: CTA Arrow

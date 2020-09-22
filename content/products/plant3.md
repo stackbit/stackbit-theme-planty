@@ -8,7 +8,7 @@ default_thumbnail_image: images/plant3.jpg
 default_original_image: images/plant3-lg.jpg
 featured: true
 order: 3
-category: cactuses
+category: content/category/cactuses.md
 section: Store
 ---
 

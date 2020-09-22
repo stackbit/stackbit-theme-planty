@@ -7,7 +7,7 @@ description: In cursus sagittis eros non congue.
 default_thumbnail_image: images/plant8.jpg
 default_original_image: images/plant8-lg.jpg
 order: 8
-category: summer
+category: content/category/summer.md
 section: Store
 ---
 

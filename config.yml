@@ -6,6 +6,7 @@ params:
   logo_dark: 'images/logo.svg'
   logo_light: 'images/logo-white.svg'
   snipcart_api_key: ''
+  hamburger_background_image: /images/leaf-light-grey.svg
   palette: default
   palettes:
     default:
