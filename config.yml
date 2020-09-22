@@ -9,7 +9,6 @@ params:
   bg_image_primary: /images/header.jpg
   bg_image_secondary: /images/leaf-light-grey.svg
   bg_image_product: /images/leaf.svg
-  bg_image_cart: /images/leaf-light-grey.svg
   snipcart_api_key: 'ODJhYmUzNTYtNTU5ZC00M2Y2LWEzZTYtODRkZmJmY2VmOWM2NjM3Mjk4MjQ4NzcyOTA3NjAw'
   palette: default
   palettes:
@@ -25,6 +24,7 @@ params:
         active_dark: '#547567'
         dark_grey: '#273132'
         light_grey: '#6B797A'
+        bg_image_cart: /images/leaf-light-grey.svg
   main_menu:
     - title: Store
       url: /store
