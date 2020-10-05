@@ -27,6 +27,9 @@ models:
       - type: string
         label: Snipcart public API key
         name: snipcart_api_key
+      - type: string
+        label: Footer Text
+        name: footer_text
       - type: image
         name: logo_light
         label: Logo Light

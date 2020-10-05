@@ -2,6 +2,7 @@
 let hamburgerMenu = document.querySelector('.hamburger')
 let hamburgerMenuContent = document.querySelector('.hamburger__content')
 let nav = document.querySelector('.nav')
+let logoDiv = document.querySelector('.nav__logo')
 let logo = document.querySelector('.nav__logo-image')
 let originalLogo = logo ? logo.src : null
 let originalHeaderColor = nav.classList.contains('nav--dark') ? 'nav--dark' : 'nav--light'
@@ -12,7 +13,7 @@ hamburgerMenu.addEventListener('click', _ => {
         hamburgerMenuContent.classList.remove('hamburger__content--closed')
         nav.classList.remove('nav--light')
         nav.classList.add('nav--dark')
-        logo.src = '/images/logo.svg'
+        logo.src = logoDiv.dataset.dark;
         toggleScroll()
     } else {
         hamburgerMenuContent.classList.add('hamburger__content--closed')
