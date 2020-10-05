@@ -124,7 +124,6 @@ models:
     label: Advanced Page
     hideContent: true
     layout: advanced
-    folder: advanced
     exclude:
       - "store.md"
       - "index.md"
