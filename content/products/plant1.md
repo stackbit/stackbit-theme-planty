@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant1
 id: '1'
 price: '49.40' 
 title: Nulla suscipit

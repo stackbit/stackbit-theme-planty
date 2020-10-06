@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant3
 id: '3'
 price: '150.00'
 title: Curabitur eu tempor

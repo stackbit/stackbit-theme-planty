@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant8
 id: '8'
 price: '50.00'
 title: Fusce sed

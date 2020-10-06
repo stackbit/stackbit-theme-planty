@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant7
 id: '7'
 price: '18.90'
 title: Sed consectetur

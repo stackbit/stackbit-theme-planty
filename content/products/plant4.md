@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant4
 id: '4'
 price: '24.99'
 title: Cras molestie

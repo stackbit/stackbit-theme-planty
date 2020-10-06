@@ -393,6 +393,9 @@ models:
     urlPath: 'products/{slug}'
     folder: products
     fields:
+      - type: slug
+        name: slug
+        label: Slug
       - type: string
         name: id
         label: ID

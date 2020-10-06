@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant2
 id: '2'
 price: '99.00'
 title: Integer porta

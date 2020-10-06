@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant6
 id: '6'
 price: '100.00'
 title: Donec finibus

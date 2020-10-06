@@ -1,5 +1,6 @@
 ---
 layout: product
+slug: plant5
 id: '5'
 price: '220.00'
 title: Vestibulum eget
