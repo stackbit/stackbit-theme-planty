@@ -4,10 +4,6 @@
     &:nth-child(-n + 2) {
       margin-top: $spacing--unit*3;
     }
-
-    &:last-child {
-      border: 1px solid red !important;
-    }
   }
 
   &__question {
