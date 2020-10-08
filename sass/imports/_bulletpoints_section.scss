@@ -6,10 +6,9 @@
   &__section {
     display: flex;
     max-width: 1000px;
-    margin-top: -150px;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     overflow: hidden;
-    &:nth-child(odd) {
+    &:nth-child(even) {
       flex-direction: row-reverse;
     }
 
@@ -30,7 +29,7 @@
     }
   }
 
-  &__section:nth-child(odd) & {
+  &__section:nth-child(even) & {
     &__section-content-container {
       margin-right: 50px;
       @include smaller-than-tablet {
@@ -39,17 +38,13 @@
     }
   }
 
-  &__section:nth-child(even) & {
+  &__section:nth-child(odd) & {
     &__section-content-container {
       margin-left: 50px;
       @include smaller-than-tablet {
         margin-left: 0;
       }
     }
-  }
-
-  &__section:nth-last-of-type(2) {
-    margin-bottom: 75px;
   }
 
   &__section-content-container {

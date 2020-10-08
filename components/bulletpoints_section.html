@@ -1,7 +1,8 @@
 {% set section = include_dict.section %}
 
+<section class="content__row bulletpoints__section" data-id="{{section.section_id}}">
 {% for bulletpoint in section.bulletpoints %}
-  <section class="content__row bulletpoint__section" data-id="{{section.section_id}}">
+  <section class="content__row bulletpoint__section">
     {% set include_dict = {'image': bulletpoint.image, 'alt': bulletpoint.title, 'cssClass': 'bulletpoint__section-image'} %}
     {% include "picture.html" %}
     <div class="bulletpoint__section-content-container">
@@ -12,3 +13,4 @@
     </div>
   </section>
 {% endfor %}
+</section>
