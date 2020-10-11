@@ -3,6 +3,7 @@ title: 'Planty'
 init_js: js/main.js
 page_load_js: js/page_load.js
 params:
+  favicon: 'images/favicon.png'
   logo_dark: 'images/logo.svg'
   logo_light: 'images/logo-white.svg'
   hamburger_background_image: /images/leaf-light-grey.svg
