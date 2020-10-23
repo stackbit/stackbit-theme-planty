@@ -19,6 +19,11 @@ metadata:
       images:
         small: images/demo-256x192.png
         large: images/demo-1024x768.png
+stackbit_banner:
+  show_banner: true
+  name: Planty
+  create_url: 'https://app.stackbit.com/create?theme=planty'
+  github_url: 'https://github.com/stackbithq/stackbit-theme-planty'
 models:
   config:
     type: config
