@@ -24,6 +24,25 @@ stackbit_banner:
   name: Planty
   create_url: 'https://app.stackbit.com/create?theme=planty'
   github_url: 'https://github.com/stackbithq/stackbit-theme-planty'
+themeParams:
+  - type: string
+    label: Snipcart public API key
+    description: Create a Snipcart account and visit https://app.snipcart.com/dashboard/account/credentials to create your API Key
+    name: snipcart_api_key
+integrations:
+  - id: snipcart
+  - id: google_analytics
+sourceMapping:
+  - source:
+      fieldPath: themeParams.snipcart_api_key
+    target:
+      file: config.yml
+      fieldPath: snipcart_api_key
+  - source:
+      fieldPath: snipcart.api_key
+    target:
+      file: config.yml
+      fieldPath: snipcart_api_key_integration
 models:
   config:
     type: config
@@ -32,6 +51,9 @@ models:
       - type: string
         label: Snipcart public API key
         name: snipcart_api_key
+      - type: string
+        label: Snipcart public API key Integration
+        name: snipcart_api_key_integration
       - type: string
         label: Footer Text
         name: footer_text
