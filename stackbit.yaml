@@ -37,12 +37,12 @@ sourceMapping:
       fieldPath: themeParams.snipcart_api_key
     target:
       file: config.yml
-      fieldPath: snipcart_api_key
+      fieldPath: params.snipcart_api_key
   - source:
       fieldPath: snipcart.api_key
     target:
       file: config.yml
-      fieldPath: snipcart_api_key_integration
+      fieldPath: params.snipcart_api_key_integration
 models:
   config:
     type: config
