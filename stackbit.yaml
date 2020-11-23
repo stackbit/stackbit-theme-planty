@@ -63,16 +63,26 @@ models:
         label: Color Palette
         name: palette
         options:
-          - default
+          - green
+          - cyan
+          - yellow
       - type: object
         name: palettes
         label: Palettes
         hidden: true
         fields:
           - type: model
+            name: green
+            label: Green
             models: [palette]
-            name: default
-            label: Default
+          - type: model
+            name: cyan
+            label: Cyan
+            models: [palette]
+          - type: model
+            name: yellow
+            label: Yellow
+            models: [palette]
       - type: list
         name: main_menu
         label: Navigation Links
@@ -208,6 +218,14 @@ models:
         name: background_image
         label: Background Image
         description: The image shown in the background of the section.
+      - type: image
+        name: background_image
+        label: Background image
+        description: The image displayed in the background of the section
+      - type: number
+        name: background_image_opacity
+        label: Background image opacity
+        description: An integer between 0 and 100. A lower value makes the image more transparent
       - type: markdown
         name: content
         label: Content
@@ -449,6 +467,15 @@ models:
         label: URL
         required: true
         widget: url
+      - type: enum
+        name: style
+        label: Style
+        options:
+          - primary
+          - secondary
+          - link
+        default: primary
+        required: true
       - type: boolean
         name: arrow
         label: CTA Arrow
