@@ -27,6 +27,36 @@
     color: $color_default;
   }
 
+  &--transparent {
+    background-color: transparent;
+    border-color: $color_active;
+    color: $color_active;
+  }
+
+  &--simple {
+    border: none;
+    color: $color_active;
+    padding: 0;
+  }
+
+  &--promo--filled {
+    background-color: white;
+    border-color: transparent;
+    color: $color_active;
+  }
+
+  &--promo--transparent {
+    background-color: transparent;
+    border-color: white;
+    color: white;
+  }
+
+  &--promo--simple {
+    border: none;
+    color: white;
+    padding: 0;
+  }
+
   &--light {
     color: $color_default;
     border: 2px solid $color_default;
@@ -43,5 +73,11 @@
 
   @include smaller-than-tablet {
     font-size: $font_size_regular;
+  }
+}
+
+.link-group {
+  a, .link-group .link{
+    margin: 0 0.5em 0.5em 0.5em;
   }
 }

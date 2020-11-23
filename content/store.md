@@ -21,4 +21,5 @@ sections:
     cta:
       title: Discover
       url: "/store"
+      style: secondary
 ---
