@@ -15,7 +15,15 @@ metadata:
   author: Snipcart
   authorURL: 'https://snipcart.com'
   palettes:
-    default:
+    green:
+      images:
+        small: images/demo-256x192.png
+        large: images/demo-1024x768.png
+    cyan:
+      images:
+        small: images/demo-256x192.png
+        large: images/demo-1024x768.png
+    yellow:
       images:
         small: images/demo-256x192.png
         large: images/demo-1024x768.png
