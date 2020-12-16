@@ -19,14 +19,6 @@ metadata:
       images:
         small: images/demo-256x192.png
         large: images/demo-1024x768.png
-    cyan:
-      images:
-        small: images/demo-256x192.png
-        large: images/demo-1024x768.png
-    yellow:
-      images:
-        small: images/demo-256x192.png
-        large: images/demo-1024x768.png
 stackbit_banner:
   show_banner: true
   name: Planty
@@ -72,8 +64,6 @@ models:
         name: palette
         options:
           - green
-          - cyan
-          - yellow
       - type: object
         name: palettes
         label: Palettes
@@ -82,14 +72,6 @@ models:
           - type: model
             name: green
             label: Green
-            models: [palette]
-          - type: model
-            name: cyan
-            label: Cyan
-            models: [palette]
-          - type: model
-            name: yellow
-            label: Yellow
             models: [palette]
       - type: list
         name: main_menu
