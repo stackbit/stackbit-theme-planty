@@ -2,6 +2,7 @@ baseurl: "/"
 title: 'Planty'
 init_js: js/main.js
 page_load_js: js/page_load.js
+page_unload_js: js/page_unload.js
 params:
   favicon: 'images/favicon.png'
   logo_dark: 'images/logo.svg'
@@ -11,7 +12,7 @@ params:
   bg_image_secondary: /images/leaf-light-grey.svg
   bg_image_product: /images/leaf.svg
   snipcart_api_key: ''
-  footer_text: 'Copyright 2020 Planty Inc. All rights reserved.'
+  footer_text: 'Copyright 2021 Planty Inc. All rights reserved.'
   palette: green
   palettes:
     green:
@@ -42,3 +43,5 @@ sass:
   output_file: assets/css/main.css
   outputStyle: nested
   precision: 10
+templates:
+  body_class: "{{ page.params.template }}-template"

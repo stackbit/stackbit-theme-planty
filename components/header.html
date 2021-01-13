@@ -4,7 +4,7 @@
 
 <header class="header">
     <nav {{ classNames('nav', {'nav--light': white_header, 'nav--dark': white_header != true}) }}>
-        <div class="nav__logo" data-dark="{{site.params.logo_dark}}">
+        <div class="nav__logo" {% if white_header or page.layout == "product" %}data-original="{{ site.params.logo_light | relative_url }}"{% endif %} data-dark="{{ site.params.logo_dark | relative_url }}">
             <a href="{{ '/' | relative_url }}">
                 {% if white_header or page.layout == "product" %}
                     {% set include_dict = {'image': site.params.logo_light, 'cssClass': 'nav__logo-image', 'alt': 'Site logo'} %}

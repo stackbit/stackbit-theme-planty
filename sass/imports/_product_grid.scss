@@ -60,11 +60,16 @@
     user-select: none; // Prevents selecting text when scroll is active
   }
 
+  &__item-link {
+    display: block;
+  }
+
   &__item-buy {
     position: absolute;
     bottom: 15px;
     right: 15px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1;
     svg {
       fill: $color_active;
     }
