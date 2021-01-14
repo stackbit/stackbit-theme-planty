@@ -44,4 +44,4 @@ sass:
   outputStyle: nested
   precision: 10
 templates:
-  body_class: "{{ page.params.template }}-template"
+  body_class: "{{ page.layout }}-template"
