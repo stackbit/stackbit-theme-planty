@@ -8,7 +8,7 @@
   }
 
   &__content {
-    background-color: $color_light;
+    background-color: $color_lighter;
     color: $color_dark;
     display: flex;
     flex-direction: column;
@@ -36,12 +36,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: $font_family_primairy;
+    font-family: $font_family_primary;
     font-weight: bold;
     font-size: $font_size_medium;
   }
 
   &__checkout {
+    cursor: pointer;
     font-size: $font_size_regular;
     margin-top: 30px;
     margin-bottom: 70px;
@@ -58,7 +59,20 @@
  
   &__nav-link {
     text-align: center;
-    font-family: $font_family_primairy;
+    font-family: $font_family_primary;
     font-size: $font_size_large;
+  }
+}
+
+@each $palette in map-keys($theme_palettes) {
+  $palette_suffix: "#{$palette}";
+
+  .palette-#{$palette_suffix} {
+    .hamburger {
+      &__content {
+        background-color: map-deep-get($theme-palettes, $palette, "lighter");
+        color: map-deep-get($theme-palettes, $palette, "dark");
+      }
+    }
   }
 }

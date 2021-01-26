@@ -18,13 +18,13 @@
     margin-top: $spacing--unit*4;
     margin-bottom: $spacing--unit*1;
     font-size: $font_size_medium;
-    color: $color_dark_grey;
+    color: $color_darker;
   }
 
   &__price {
     margin-top: 15px;
     font-size: $font_size_medium;
-    color: $color_dark_grey;
+    color: $color_darker;
     font-weight: bold;
   }
 
@@ -32,7 +32,7 @@
     text-transform: uppercase;
     font-weight: bold;
     font-size: $font_size_small;
-    color: $color_dark_grey;
+    color: $color_darker;
   }
 
   &__item-image {
@@ -43,6 +43,7 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+    display: block;
     &--featured {
       box-shadow: 0px 20px 52px rgba(0, 0, 0, 0.31);
     }
@@ -70,23 +71,18 @@
     right: 15px;
     box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    svg {
-      fill: $color_active;
-    }
   }
+}
 
-  &--draggable {
-    @include smaller-than-tablet {
-      display: inline-flex;
-    }
-  }
-  &--draggable & {
-    &__item {
-      @include smaller-than-tablet {
-        min-width: 270px;
-        &:not(:last-child) {
-          margin-right: 25px;
-        }
+@each $palette in map-keys($theme_palettes) {
+  $palette_suffix: "#{$palette}";
+
+  .palette-#{$palette_suffix} {
+    .product-grid {
+      &__title,
+      &__price,
+      &__category {
+        color: map-deep-get($theme-palettes, $palette, "darker");
       }
     }
   }

@@ -1,17 +1,15 @@
 {% set section = include_dict.section %}
 {% set testimonials = section.testimonials %}
-<section class="content__row" data-id="{{section.section_id}}">
-    <h2 class="content__row-title">Testimonials</h2>
+<section class="content__row" data-id="{{ section.section_id }}">
+    <h2 class="content__row-title">{{ section.title }}</h2>
     <div class="quotes">
         {% for testimonial in testimonials %}
         <div class="quotes__item">
-            <svg class="quotes__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M0 14.1818L4.57143 0H9.52381L5.71429 13.2893H9.52381V24H0V14.1818ZM14.4762 14.1818L19.0476 0H24L20.1905 13.2893H24V24H14.4762V14.1818Z" />
+            <svg class="quotes__icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 14.182l4.571-14.182h4.952l-3.81 13.289h3.81v10.711h-9.524v-9.818zM14.476 14.182l4.571-14.182h4.952l-3.81 13.289h3.81v10.711h-9.524v-9.818z"></path>
             </svg>
             <div class="quotes__text">{{ testimonial.text }}</div>
-            <div class="quotes__author">{{ testimonial.author.name }}<span class="quotes__location">,
-                    {{ testimonial.author.location }}</span></div>
+            <div class="quotes__author">{{ testimonial.author.name }}<span class="quotes__location">, {{ testimonial.author.location }}</span></div>
         </div>
         <div class="quotes__separator"></div>
         {% endfor %}

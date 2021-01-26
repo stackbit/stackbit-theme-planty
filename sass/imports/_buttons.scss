@@ -1,5 +1,6 @@
 .button {
-  font-family: $font_family_primairy;
+  font-family: $font_family_primary;
+  width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
   font-size: $font_size_medium;
@@ -14,7 +15,7 @@
   align-items: center;
   transition: color .2s, background-color .2s;
 
-  svg path {
+  svg {
     color: inherit;
     fill: currentColor;
   }
@@ -30,11 +31,13 @@
     outline: none;
   }
 
-  &__icon {
-    padding: 0 0.5em;
-  }
+  &__icon,
   &__text {
     padding: 0 0.5em;
+  }
+
+  &__icon + &__text {
+    padding-left: 0;
   }
 
   &--icon-only {
@@ -54,8 +57,8 @@
     background-color: $color_active;
     color: $color_default;
     svg {
-      width: 18px;
-      height: 18px;
+      width: 22px;
+      height: 22px;
     }
     &:hover {
       background-color: $color_active_medium;
@@ -84,6 +87,47 @@
     &__icon svg {
         height: $spacing--unit*3;
         width: $spacing--unit*3;
+    }
+  }
+}
+
+@each $palette in map-keys($theme_palettes) {
+  $palette_suffix: "#{$palette}";
+
+  .palette-#{$palette_suffix} {
+    .button {
+      background-color: $color_default;
+      color: map-deep-get($theme-palettes, $palette, "active");
+
+      &:hover {
+        background-color: map-deep-get($theme-palettes, $palette, "active");
+        color: $color_default;
+      }
+    
+      &:active {
+        background-color: map-deep-get($theme-palettes, $palette, "active_medium");
+        color: $color_default;
+      }
+
+      &--transparent {
+        background-color: transparent;
+        &:hover,
+        &:active {
+          background-color: transparent;
+        }
+      }
+    
+      &--std {
+        background-color: map-deep-get($theme-palettes, $palette, "active");
+        color: $color_default;
+
+        &:hover {
+          background-color: map-deep-get($theme-palettes, $palette, "active_medium");
+        }
+        &:active {
+          background-color: map-deep-get($theme-palettes, $palette, "active_dark");
+        }
+      }
     }
   }
 }

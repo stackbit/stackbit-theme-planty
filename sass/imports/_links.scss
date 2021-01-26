@@ -5,12 +5,15 @@
   border: 2px solid $color_active;
   padding: 13px 22px;
   border-radius: 5px;
-  font-family: $font_family_primairy;
+  font-family: $font_family_primary;
   font-weight: bold;
   color: $color_active;
+  width: -moz-fit-content;
   width: fit-content;
   background-color: transparent;
   svg {
+    color: inherit;
+    fill: currentColor;
     margin-left: 10px;
   }
 
@@ -27,48 +30,26 @@
     color: $color_default;
   }
 
-  &--transparent {
-    background-color: transparent;
-    border-color: $color_active;
-    color: $color_active;
-  }
-
-  &--simple {
+  &--borderless {
     border: none;
-    color: $color_active;
-    padding: 0;
-  }
-
-  &--promo--filled {
-    background-color: white;
-    border-color: transparent;
-    color: $color_active;
-  }
-
-  &--promo--transparent {
-    background-color: transparent;
-    border-color: white;
-    color: white;
-  }
-
-  &--promo--simple {
-    border: none;
-    color: white;
     padding: 0;
   }
 
   &--light {
     color: $color_default;
-    border: 2px solid $color_default;
-    svg {
-      path {
-        fill: $color_default;
-      }
-    }
+    border-color: $color_default;
   }
 
-  &--borderless {
+  &--light-filled {
+    background-color: $color_default;
+    border-color: $color_default;
+    color: $color_active;
+  }
+
+  &--light-borderless {
     border: none;
+    color: $color_default;
+    padding: 0;
   }
 
   @include smaller-than-tablet {
@@ -77,7 +58,44 @@
 }
 
 .link-group {
-  a, .link-group .link{
-    margin: 0 0.5em 0.5em 0.5em;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  a,
+  .link {
+    margin: 0 0.5em 1em;
+  }
+}
+
+@each $palette in map-keys($theme_palettes) {
+  $palette_suffix: "#{$palette}";
+
+  .palette-#{$palette_suffix} {
+    .link {
+      border-color: map-deep-get($theme-palettes, $palette, "active");
+      color: map-deep-get($theme-palettes, $palette, "active");
+
+      &--filled {
+        background-color: map-deep-get($theme-palettes, $palette, "active");
+        color: $color_default;
+      }
+
+      &--light {
+        color: $color_default;
+        border-color: $color_default;
+      }
+    
+      &--light-filled {
+        background-color: $color_default;
+        border-color: $color_default;
+        color: map-deep-get($theme-palettes, $palette, "active");
+      }
+    
+      &--light-borderless {
+        color: $color_default;
+      }
+    }
   }
 }
