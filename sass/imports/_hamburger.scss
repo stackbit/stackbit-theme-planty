@@ -65,9 +65,7 @@
 }
 
 @each $palette in map-keys($theme_palettes) {
-  $palette_suffix: "#{$palette}";
-
-  .palette-#{$palette_suffix} {
+  .palette-#{$palette} {
     .hamburger {
       &__content {
         background-color: map-deep-get($theme-palettes, $palette, "lighter");

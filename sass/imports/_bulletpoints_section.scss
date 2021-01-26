@@ -82,9 +82,7 @@
 }
 
 @each $palette in map-keys($theme_palettes) {
-  $palette_suffix: "#{$palette}";
-
-  .palette-#{$palette_suffix} {
+  .palette-#{$palette} {
     .bulletpoint {
       &__section-title {
         color: map-deep-get($theme-palettes, $palette, "darker");

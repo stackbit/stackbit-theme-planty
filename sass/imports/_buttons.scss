@@ -92,9 +92,7 @@
 }
 
 @each $palette in map-keys($theme_palettes) {
-  $palette_suffix: "#{$palette}";
-
-  .palette-#{$palette_suffix} {
+  .palette-#{$palette} {
     .button {
       background-color: $color_default;
       color: map-deep-get($theme-palettes, $palette, "active");

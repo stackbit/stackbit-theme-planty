@@ -188,9 +188,7 @@
 }
 
 @each $palette in map-keys($theme_palettes) {
-    $palette_suffix: "#{$palette}";
-
-    .palette-#{$palette_suffix} {
+    .palette-#{$palette} {
         .product {
             &__background-left-overlay {
                 background: map-deep-get($theme-palettes, $palette, "dark");

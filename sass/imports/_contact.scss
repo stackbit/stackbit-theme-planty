@@ -110,9 +110,7 @@
 }
 
 @each $palette in map-keys($theme_palettes) {
-  $palette_suffix: "#{$palette}";
-
-  .palette-#{$palette_suffix} {
+  .palette-#{$palette} {
     .contact {
       &__section {
         &:last-child {
