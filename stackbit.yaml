@@ -89,7 +89,7 @@ models:
     hideContent: true
     file: index.md
     singleInstance: true
-    extends: advancedPageFields
+    extends: advanced_page_fields
   advanced:
     type: page
     label: Advanced Page
@@ -98,7 +98,7 @@ models:
     exclude:
       - "store.md"
       - "index.md"
-    extends: advancedPageFields
+    extends: advanced_page_fields
   store:
     type: page
     label: Store
@@ -106,9 +106,10 @@ models:
     file: store.md
     singleInstance: true
     hideContent: true
-    extends: advancedPageFields
-  advancedPageFields:
+    extends: advanced_page_fields
+  advanced_page_fields:
     type: object
+    label: Advanced page fields
     fields:
       - type: string
         label: Title
@@ -419,7 +420,6 @@ models:
         name: url
         label: URL
         required: true
-        widget: url
         default: "#"
       - type: enum
         name: style
@@ -462,7 +462,6 @@ models:
             - noimageindex
             - notranslate
             - none
-          default: all
       - type: list
         name: extra
         label: Extra
