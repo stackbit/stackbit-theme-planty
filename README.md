@@ -2,7 +2,11 @@
 
 # Planty Stackbit theme
 
-[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?theme=https://github.com/snipcart/stackbit-theme-planty&ssg=jekyll)
+This theme is deprecated and will no longer be maintained by Stackbit. 
+Stackbit launched a new major version that brings a superior developer experience and visual editing capabilities.
+
+Click the button below to create a new website using the new version of Stackbit.
+[![Create with Stackbit](https://assets.stackbit.com/badge/create-with-stackbit.svg)](https://app.stackbit.com/create?utm_source=theme-readme&utm_medium=referral&utm_campaign=stackbit_themes)
 
 Planty is an e-commerce ready custom theme for Stackbit created by [Snipcart](http://bit.ly/2YB7AUL).
 
